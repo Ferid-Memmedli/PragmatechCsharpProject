@@ -3,7 +3,6 @@
 int num1 = 100; 
 object obj1 = num1;
 
-
 print(num1.GetType());
 print(obj1.GetType());
 
