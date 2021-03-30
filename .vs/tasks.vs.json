@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Program",
+      "appliesTo": "Week3.Task/Program.cs",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-Program",
+      "appliesTo": "Week3.Task/Program.cs",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-Week3",
+      "appliesTo": "Week3.Task/",
+      "type": "launch"
+    }
+  ]
+}
