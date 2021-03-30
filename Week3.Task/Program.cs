@@ -3,6 +3,8 @@
 #region Task
 
 #region 1. Bal Ortalamasinin Hesablanmasi
+
+#region Task 1.1
 /*
  * 1. Istifadeciden gelen 3 ferqli imtahan neticelerinin
  * ortalamasinin 45-den  boyuk ve ya beraber olmasini
@@ -19,7 +21,7 @@
  * "Ortalama 45-e beraber ve ya boyukdurmu?" : "40"(Ortalamadir) : Beli ve ya Xeyr
  *
  */
-
+//             Helli
 //decimal netice1, netice2, netice3, ortalama;
 //print("Ortalamanin Hesaplanmasi");
 //netice1 = Convert.ToDecimal(input("1-ci Imtahanin neticenisini yazin :"));
@@ -34,8 +36,9 @@
 //print("Ortalama 45-e beraber ve ya boyukdurmu?");
 //print(netice);
 
-//-----------------------------------------------------------------------------------------------------------------
+#endregion
 
+#region Task 1.2
 /*
 * 2.Bal Ortalamasinin Hesablanmasi
 *
@@ -54,6 +57,7 @@
 * Ortalama : 35
 */
 
+//            HElli
 //decimal netice1, netice2, netice3, netice4,ortalama;
 //print("Bal Ortalamasinin Hesablanmasi :");
 //string name = input("Adinizi ve Soyadinizi yazin :");
@@ -68,6 +72,65 @@
 //print($"Netice : {netice3}");
 //print($"Netice : {netice4}");
 //print($"Ortalama : {ortalama}");
+#endregion
+
+#region Task 1.3
+/*
+*3.Bal Ortalamasinin Hesablanmasi
+*
+* istifadeciden ad ve soyadini ,
+*  4 eded imtahan neticesini daxil etmesini isteyirik.
+*
+*
+* ortalama 45-den kicikdirse : qeyri - kafi Kece bilmediz
+* ortalama 45-e beraber ve ya 70-den  kicikdirse :  Meqbul
+* ortalama 70-e beraber ve ya 90-dan  kicikdirse :  Yaxsi
+* ortalama 90 ile  100 arasinda (100-de daxil) :  Ela
+*
+* qeyd : ortalama 100 - den boyuk ola bilmez.
+*
+* netice asagidaki kimi olmalidir.
+*
+* Ad ve Soyad : Parviz Aliyev
+*
+* Netice : 50
+* Netice : 40
+* Netice : 30
+* Netice : 20
+*
+*Ortalama : 35
+* Semestr Yekunu: qeyri - kafi Kece bilmediz
+*/
+
+//            HElli
+//decimal netice1, netice2, netice3, netice4, ortalama;
+
+//print("Bal Ortalamasinin Hesablanmasi");
+//string name = input("Adinizi ve Soyadinizi yazin :");
+//netice1 = Convert.ToDecimal(input("1-ci Imtahanin neticenisini yazin :"));
+//netice2 = Convert.ToDecimal(input("2-ci Imtahanin neticenisini yazin :"));
+//netice3 = Convert.ToDecimal(input("3-cu Imtahanin neticenisini yazin :"));
+//netice4 = Convert.ToDecimal(input("4-cu Imtahanin neticenisini yazin :"));
+//ortalama = (netice1 + netice2 + netice3 + netice4) / 4;
+
+//print($"Ad ve Soyad : {name}");
+//print($"Netice : {netice1}");
+//print($"Netice : {netice2}");
+//print($"Netice : {netice3}");
+//print($"Netice : {netice4}");
+//print($"Ortalama : {ortalama}");
+
+//if (ortalama > 100)
+//    print("Ortalama 100 - den boyuk ola bilmez.");
+//else if (90 <= ortalama && ortalama <= 100)
+//    print("Semestr Yekunu : Ela ");
+//else if (70 <= ortalama && ortalama < 90)
+//    print("Semestr Yekunu : Yaxwi ");
+//else if (45 <= ortalama && ortalama < 70)
+//    print("Semestr Yekunu : Meqbul ");
+//else
+//    print("Semestr Yekunu : Qeyri-Kafi Kece bilmediz");
+#endregion
 
 #endregion
 
@@ -98,30 +161,40 @@ print(cem);
 #endregion
 
 #region 4. while ile faktorialin hesablanmasi
-//  1-ci Hell yolu
+
+#region Task 4.1
+
 //decimal faktorial = decimal.Parse(input("Faktorialin hesablanmasi ucun eded daxil edin :"));
 //decimal hasil = 1;
 //int say = 1;
-//while (say<=faktorial)
+//while (say <= faktorial)
 //{
 //    hasil *= say;
 //    say++;
 //}
 //print(hasil);
 
-//  2-ci Hell yolu
+#endregion
+
+#region Task 4.2
+
+//2 - ci Hell yolu
 //decimal faktorial = decimal.Parse(input("Faktorialin hesablanmasi ucun eded daxil edin :"));
 //decimal hasil = 1;
-//while (faktorial>1)
+//while (faktorial > 1)
 //{
 //    hasil *= faktorial;
 //    faktorial--;
 //}
 //print(hasil);
+
+#endregion
+
 #endregion
 
 #region 5. Mini login
 
+#region Task 5.1
 /*
  * Username ve password deye deyisenler teyin edin.
  *
@@ -136,14 +209,18 @@ print(cem);
  * Netice olaraq login emeliyyatinin ugurlu ve ya
  *
  *  daxil edilen username ve ya sifrenin dogru olmadigi mesajini verin.
- *
+ *  
+ *  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  qeyd: eyni taski, if, ternary operator ve switch ile yazin
  *
  */
+
 //  Helli
 //string Username = "admin";
 //string Password = "123";
 //string name = input("Username daxil edin :");
 //string code = input("Password daxil edin :");
+//
 //if (Username==name && Password == code)
 //    print("Login emelliyati ugurla yerine yetirildi");
 //else if (Username != name && Password == code)
@@ -152,6 +229,84 @@ print(cem);
 //    print("Username yanlis girdiniz ");
 //else
 //    print("Username ve Password yanlis girildi ");
+
+#endregion
+
+#region Task 5.2
+/*
+ * Istifadeciden role(selahiyyet) isteyerek daxil etdiyi role uygun mesaj verin.
+ *
+ *  Istifadeci selahiyyeti (I.S) :
+ *
+ * I.S = AA , BB , CC ise "Admin selahiyyetlerine sahibsiniz."
+ * I.S = MM "Moderator selahiyyetlerine sahibsiniz."
+ * I.S = MH "Muhasib selahiyyetlerine sahibsiniz."
+ * I.S = UU "Standart istifadeci selahiyyetlerine sahibsiniz."
+ *
+ * qeyd edilenlerden ferqli olarsa : "Daxil edilen selahiyyet dogru deyil"
+ *
+ * switchden istifade edin.
+ */
+
+//               HElli
+//string role = input("Selahiyyet daxil edin :");
+//switch (role)
+//{
+//    case "AA":
+//    case "BB":
+//    case "CC":
+//        print("Admin selahiyyetlerine sahibsiniz.");
+//        break;
+//    case "MM":
+//        print("Moderator selahiyyetlerine sahibsiniz.");
+//        break;
+//    case "MH":
+//        print("Muhasib selahiyyetlerine sahibsiniz.");
+//        break;
+//    case "UU":
+//        print("Standart istifadeci selahiyyetlerine sahibsiniz.");
+//        break;
+//    default:
+//        print("Daxil edilen selahiyyet dogru deyil");
+//        break;
+//}
+#endregion
+
+#endregion
+
+#region 7. menfi musbet
+/*
+ * Daxil edilen ededin menfi ve ya musbet oldugunu yoxlayin ona uygun geriye deyer qaytarin.
+ *
+ * qeyd: if ve ternary istifade edin ayri ayri
+ */
+
+//   1-ci HElli
+//string yoxlama = input("Eded daxil edin :");
+//if (yoxlama[0] == '-')
+//    print($"{yoxlama} Ededi Menfidir.");
+//else
+//    print($"{yoxlama} Ededi Musbetdir.");
+
+//   2-ci HElli
+//print(yoxlama[0] == '-' ? $"{ yoxlama} Ededi Menfidir" : $"{yoxlama} Ededi Musbetdir");
+
+//   3-cu HElli
+//foreach (var item in yoxlama)
+//{
+//    if (item == '-')
+//        print($"{yoxlama} Ededi Menfidir.");
+//    else
+//        print($"{yoxlama} Ededi Musbetdir.");
+//    break;
+//}
+
+//   4-cu HElli
+//foreach (var item in yoxlama)
+//{
+//    print(item == '-' ? $"{ yoxlama} Ededi Menfidir" : $"{yoxlama} Ededi Musbetdir");
+//    break;
+//}
 
 #endregion
 
