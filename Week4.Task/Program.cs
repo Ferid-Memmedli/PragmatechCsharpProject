@@ -81,21 +81,28 @@ foreach (var item in intArray)
 */
 
 //******************************************************************  HELLI  **********************************************************************
-
 /*
 int[] arr = { 5, 6, 9, 12, 15, 7, 3, 20, 14, 36, 24 };
 int[] reverseArr = new int[arr.Length];
 int index = 0;
 for (int i = arr.Length - 1; i >= 0; i--)
 {
-reverseArr[index] = arr[i];
-index++;
+    reverseArr[index] = arr[i];
+    index++;
 }
+Array.ForEach(reverseArr, e => Print(e));
+*/
 
-foreach (var item in reverseArr)
+/*
+int[] arr = { 5, 6, 9, 12, 15, 7, 3, 20, 14, 36, 24 };
+for (int i = 0; i < arr.Length / 2; i++)
 {
-Print(item);
-}*/
+    int temp = arr[i];
+    arr[i] = arr[arr.Length - i - 1];
+    arr[arr.Length - i - 1] = temp;
+}
+Array.ForEach(arr, e => Print(e));
+*/
 
 #endregion 3. geriden
 

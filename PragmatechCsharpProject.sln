@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week3.Task", "Week3.Task\Week3.Task.csproj", "{A3B5BC0D-7FCF-4C94-9885-9D4F992B50A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Task", "Week4.Task\Week4.Task.csproj", "{BC5C6A3E-E21E-4443-AE56-F13BD3E0567F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week4.Task", "Week4.Task\Week4.Task.csproj", "{BC5C6A3E-E21E-4443-AE56-F13BD3E0567F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{628A5EA6-FC99-43D1-AAA5-59AFF1B04A11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3B5BC0D-7FCF-4C94-9885-9D4F992B50A1} = {628A5EA6-FC99-43D1-AAA5-59AFF1B04A11}
+		{BC5C6A3E-E21E-4443-AE56-F13BD3E0567F} = {628A5EA6-FC99-43D1-AAA5-59AFF1B04A11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEE43466-B39B-47F8-A9CB-9331C33562EE}
