@@ -17,7 +17,7 @@ int[] intArray = { 2, 9, 4, 3, 5, 1, 7 };
 
 for (int i = 0; i < intArray.Length; i++)
 {
-    for (int j = 0; j < intArray.Length; j++)
+    for (int j = i+1; j < intArray.Length; j++)
     {
         if (intArray[i] < intArray[j])
         {
@@ -32,6 +32,7 @@ foreach (var item in intArray)
 {
     Print(item);
 }
+
 */
 
 #endregion 1. artan sira
@@ -52,7 +53,7 @@ int[] intArray = { 2, 9, 4, 3, 5, 1, 7 };
 
 for (int i = 0; i < intArray.Length; i++)
 {
-    for (int j = 0; j < intArray.Length; j++)
+    for (int j = i+1; j < intArray.Length; j++)
     {
         if (intArray[i] > intArray[j])
         {
