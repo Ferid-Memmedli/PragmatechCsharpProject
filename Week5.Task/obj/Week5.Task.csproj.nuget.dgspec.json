@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week4.Task\\Week4.Task.csproj": {}
+    "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week5.Task\\Week5.Task.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week4.Task\\Week4.Task.csproj": {
+    "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week5.Task\\Week5.Task.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week4.Task\\Week4.Task.csproj",
-        "projectName": "Week4.Task",
-        "projectPath": "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week4.Task\\Week4.Task.csproj",
+        "projectUniqueName": "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week5.Task\\Week5.Task.csproj",
+        "projectName": "Week5.Task",
+        "projectPath": "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week5.Task\\Week5.Task.csproj",
         "packagesPath": "C:\\Users\\shaha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week4.Task\\obj\\",
+        "outputPath": "C:\\Users\\shaha\\Desktop\\Pragmatech\\PragmatechCsharpProject\\Week5.Task\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
