@@ -15,26 +15,10 @@
 /*
 int[] intArray = { 2, 9, 4, 3, 5, 1, 7 };
 
-for (int i = 0; i < intArray.Length; i++)
-{
-    for (int j = i+1; j < intArray.Length; j++)
-    {
-        if (intArray[i] < intArray[j])
-        {
-            int boyukEded = intArray[j];
-            intArray[j] = intArray[i];
-            intArray[i] = boyukEded;
-        }
-    }
-}
+SortMinToMax(intArray);
 
-foreach (var item in intArray)
-{
-    Print(item);
-}
-
+PrintArray(intArray);
 */
-
 #endregion 1. artan sira
 
 #region 2. azalan sira
@@ -49,27 +33,12 @@ foreach (var item in intArray)
 //******************************************************************  HELLI  **********************************************************************
 
 /*
-int[] intArray = { 2, 9, 4, 3, 5, 1, 7 };
+int[] intArray1 = { 2, 9, 4, 3, 5, 1, 7 };
 
-for (int i = 0; i < intArray.Length; i++)
-{
-    for (int j = i+1; j < intArray.Length; j++)
-    {
-        if (intArray[i] > intArray[j])
-        {
-            int kicikEded = intArray[j];
-            intArray[j] = intArray[i];
-            intArray[i] = kicikEded;
-        }
-    }
-}
+SortMaxToMin(intArray1);
 
-foreach (var item in intArray)
-{
-    Print(item);
-}
+PrintArray(intArray1);
 */
-
 #endregion 2. azalan sira
 
 #region 3. geriden
@@ -84,27 +53,9 @@ foreach (var item in intArray)
 //******************************************************************  HELLI  **********************************************************************
 /*
 int[] arr = { 5, 6, 9, 12, 15, 7, 3, 20, 14, 36, 24 };
-int[] reverseArr = new int[arr.Length];
-int index = 0;
-for (int i = arr.Length - 1; i >= 0; i--)
-{
-    reverseArr[index] = arr[i];
-    index++;
-}
-Array.ForEach(reverseArr, e => Print(e));
+ReverseIntArray(arr);
+PrintArray(arr);
 */
-//******************************************************************  2-ci HELLI  **********************************************************************
-/*
-int[] arr = { 5, 6, 9, 12, 15, 7, 3, 20, 14, 36, 24 };
-for (int i = 0; i < arr.Length / 2; i++)
-{
-    int temp = arr[i];
-    arr[i] = arr[arr.Length - i - 1];
-    arr[arr.Length - i - 1] = temp;
-}
-Array.ForEach(arr, e => Print(e));
-*/
-
 #endregion 3. geriden
 
 #region 4. para pul el cirki
@@ -139,23 +90,15 @@ while (true)
         try
         {
             int money = int.Parse(mebleg);
-            for (int i = 0; i < eskinaslar.Length; i++)
-            {
-                if (money >= eskinaslar[i])
-                {
-                    int temp = money / eskinaslar[i];
-                    money = money - eskinaslar[i] * temp;
-                    Print($"{temp} eded {eskinaslar[i]}");
-                }
-            }
+            PulCixarisi(money);
         }
         catch (Exception)
         {
             Print("Duzgun melumat daxil olunmadi");
         }
     }
-}*/
-
+}
+*/
 #endregion 4. para pul el cirki
 
 #region 5. tek ededlerin kublari cemi
@@ -208,7 +151,7 @@ Print(DateTime.Today.Year - dogumIli);
 double musbetEded1 = double.Parse(Input("Musbet eded daxil edin: "));
 double musbetEded2 = double.Parse(Input("Ikinci musbet eded daxil edin: "));
 double hasil = 0;
-if (musbetEded1 > 0 && musbetEded2 > 0)
+if (PozitivEded(musbetEded1) && PozitivEded(musbetEded2))
 {
     for (int i = 1; i <= musbetEded1; i++)
         hasil += musbetEded2;
@@ -235,6 +178,72 @@ static string Input(object value)
 {
     Console.Write(value);
     return Console.ReadLine();
+}
+
+static void PrintArray(int[] list)
+{
+    Array.ForEach(list, e => Console.Write(e + " "));
+}
+
+static void SortMaxToMin(int[] list)
+{
+    for (int i = 0; i < list.Length; i++)
+    {
+        for (int j = i + 1; j < list.Length; j++)
+        {
+            if (list[i] < list[j])
+            {
+                int boyukEded = list[j];
+                list[j] = list[i];
+                list[i] = boyukEded;
+            }
+        }
+    }
+}
+            
+static void SortMinToMax(int[] list)
+{
+    for (int i = 0; i < list.Length; i++)
+    {
+        for (int j = i + 1; j < list.Length; j++)
+        {
+            if (list[i] > list[j])
+            {
+                int boyukEded = list[j];
+                list[j] = list[i];
+                list[i] = boyukEded;
+            }
+        }
+    }
+}
+
+static void ReverseIntArray(int[] list)
+{
+    for (int i = 0; i < list.Length / 2; i++)
+    {
+        var temp = list[i];
+        list[i] = list[list.Length - i - 1];
+        list[list.Length - i - 1] = temp;
+    }
+}
+
+static void PulCixarisi(int cixarisPulu)
+{
+    int[] eskinaslar = { 200, 100, 50, 20, 10, 5, 1 };
+    for (int i = 0; i < eskinaslar.Length; i++)
+    {
+        if (cixarisPulu >= eskinaslar[i])
+        {
+            int temp = cixarisPulu / eskinaslar[i];
+            cixarisPulu = cixarisPulu - eskinaslar[i] * temp;
+            Print($"{temp} eded {eskinaslar[i]}");
+        }
+    }
+}
+
+static bool PozitivEded(double eded)
+{
+    return eded >= 0;
 }
 
 #endregion Methods
