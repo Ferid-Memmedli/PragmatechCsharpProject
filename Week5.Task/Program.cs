@@ -124,7 +124,7 @@ namespace Week5.Task
                         case "2":
                             Console.Clear();
                             int pul = NegdPulMenyu(balans, ad);
-                            mexaric.Add(pul, DateTime.Now);
+                            mexaric.Add(DateTime.Now, pul);
                             PulCixarisi(pul);
                             balans = balans - pul;
                             Print($"Balansinizda {balans}azn qaldi");

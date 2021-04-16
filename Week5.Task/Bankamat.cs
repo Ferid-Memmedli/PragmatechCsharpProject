@@ -117,7 +117,7 @@ Hormetli {ad} Balansiniz : {balans} azn
                 Print($"Hormetli {ad} balansinizda {balans}azn qaldi");
                 Print("Mexaric Tarixcesi");
                 foreach (DictionaryEntry de in mexaric)
-                    Console.WriteLine($"Cixarilan Mebleg: {de.Key}azn, Cixarildiqi Tarix: {de.Value}");
+                    Console.WriteLine($"Cixarilan Mebleg: {de.Value}azn, Cixarildiqi Tarix: {de.Key}");
             }
         }
         public static bool EdedYoxlama(string eded)
