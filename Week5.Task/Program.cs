@@ -23,8 +23,8 @@ namespace Week5.Task
              * Student classi yaradaraq method-lari orada yazib Program classi icerisinde Main methodunda istifade edeceksiz.
              */
             //*********************************************** HELLI ******************************************************************
-            /*
-            string ad = Input("Adinizi daxil edin: ");
+      
+            string name = Input("Adinizi daxil edin: ");
             string soyad = Input("Soyadinizi daxil edin: ");
             decimal[] Neticeler = new decimal[3];
         evvel:
@@ -54,8 +54,8 @@ namespace Week5.Task
                     }
                 }
             }
-            ImtahandanKecis(ad, soyad, Neticeler[0], Neticeler[1], Neticeler[2]);
-            */
+            ImtahandanKecis(name, soyad, Neticeler[0], Neticeler[1], Neticeler[2]);
+            
 
             #endregion 1. Havada bulut dimplom isini unuty
 
