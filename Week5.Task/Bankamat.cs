@@ -108,7 +108,7 @@ Hormetli {ad} Balansiniz : {balans} azn
                 }
             }
         }
-        public static void BalansCixaris(int balans, string ad,Hashtable mexaric)
+        public static void BalansCixaris(int balans, string ad, Hashtable mexaric)
         {
             if (balans == 1000)
                 Print("Balansdan Mexaric Olunmayib");

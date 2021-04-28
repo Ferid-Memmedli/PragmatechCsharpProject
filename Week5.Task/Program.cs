@@ -23,7 +23,7 @@ namespace Week5.Task
              * Student classi yaradaraq method-lari orada yazib Program classi icerisinde Main methodunda istifade edeceksiz.
              */
             //*********************************************** HELLI ******************************************************************
-      
+
             string name = Input("Adinizi daxil edin: ");
             string soyad = Input("Soyadinizi daxil edin: ");
             decimal[] Neticeler = new decimal[3];
@@ -55,7 +55,7 @@ namespace Week5.Task
                 }
             }
             ImtahandanKecis(name, soyad, Neticeler[0], Neticeler[1], Neticeler[2]);
-            
+
 
             #endregion 1. Havada bulut dimplom isini unuty
 
@@ -131,7 +131,7 @@ namespace Week5.Task
                             goto anamenyu;
                         case "3":
                             Console.Clear();
-                            BalansCixaris(balans, ad,mexaric);
+                            BalansCixaris(balans, ad, mexaric);
                             goto anamenyu;
                     }
                 }

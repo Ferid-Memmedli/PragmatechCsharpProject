@@ -200,7 +200,7 @@ static void SortMaxToMin(int[] list)
         }
     }
 }
-            
+
 static void SortMinToMax(int[] list)
 {
     for (int i = 0; i < list.Length; i++)
