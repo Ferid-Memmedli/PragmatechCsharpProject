@@ -10,9 +10,13 @@ namespace Week6.Task
     {
         public int Id { get; set; }
         public string Ad { get; set; }
+        public double Miqdar { get; set; }
         public string MiqdarNovu { get; set; }
         public double Qiymet { get; set; }
-        public double Edv { get; set; }
-        public double Endirim { get; set; }
+        public int Edv { get; set; }
+        public double EdvQaytarici()
+        {
+            return Qiymet * Edv / 100;
+        }
     }
 }

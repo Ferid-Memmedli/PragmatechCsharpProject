@@ -68,26 +68,8 @@ namespace Week6.Task
              *   Sizin qazanciniz=================== 0,90              |
              *  | cay               | 2   eded |  1,50    |0 %  |3     |
              *   Sizin qazanciniz=================== 0,90              |
-             *  | alma qirmizi      | 2   kq   |  2,50    |0 %  |      |
+             *  | alma qirmizi      | 2   kq   |  2,50    |0 %  |5     |
              *   Sizin qazanciniz=================== 0,90              |
-             *  | alma sari         | 2   kq   |  2       |18 % |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | goyerti           | 2   eded |  0,15    |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | makaron           | 2   eded |  2       |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | baliq konservasi  | 2   eded |  3,50    |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | lavas             | 1   eded |  1,50    |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | corek             | 2   eded |  0,50    |18 % |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | pomidor           | 2   kq   |  2,50    |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | xiyar             | 2   kq   |  2       |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90              |
-             *  | toyuq             | 2   eded |  2,50    |0 %  |      |
-             *   Sizin qazanciniz=================== 0,90
              * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
              * Endirim                                          | 2,48 |
              * vergi edv                                        | 5,02 |
@@ -113,39 +95,86 @@ namespace Week6.Task
              *
              *  | mehsul adi        |  miqdar  |  qiymet  |EDV  |toplam
              *  | Un                | 5 kq     |  1       |0 %  |5
-             *   Sizin qazanciniz=================== 0,495
+             *   Sizin qazanciniz=================== 0,25
              *  | quzu eti          | 3,5 kq   |  12      |18 % |42
              *
              *
              *  alis veris 15 azn den azdirsa catdirilma ucun 4,50 azn teleb olunacaq.
              */
             //**************************************Helli******************************************
-            #region Mehsul elave olunmasi
+
             List<Mehsul> mehsullar = new List<Mehsul>();
+            List<Mehsul> alinanMehsullar = new List<Mehsul>();
+            ArrayList toplamEdvDeyer = new();
+            ArrayList toplamQiymet = new();
+
+            #region Mehsul elave olunmasi
             do
             {
                 mehsullar.Add(new Mehsul
                 {
                     Ad = Input("Mehsul adi : "),
-                    MiqdarNovu = Input("Mehsul miqdar novunu yazin (kq ve ya eded) : "),
+                    //MiqdarNovu = Input("Mehsul miqdar novunu yazin (kq ve ya eded) : "),
                     Qiymet = double.Parse(Input("Mehsulun qiymeti : ")),
-                    Edv = double.Parse(Input("Mehsulun EDV faizi : ")),
-                    Endirim = double.Parse(Input("Mehsulun Endirim faizi : "))
+                    Edv = int.Parse(Input("Mehsulun EDV faizi : ")),
                 });
             } while (Input("Yeni mehsul elave edmek ucun 'H' yazin : ").ToUpper() == "H");
             #endregion Mehsul elave olunmasi
 
             #region Mehsullara baxmaq
-
-
+            Print("*************************************");
+            Print("Mehsullarimiz");
+            Print("*************************************");
+            Print("| Id | Mehsul adi        |  Qiymet  |");
+            for (int i = 0; i < mehsullar.Count; i++)
+            {
+                mehsullar[i].Id = i + 1;
+                Print(String.Format($"|{mehsullar[i].Id,-3} | {mehsullar[i].Ad,-17} | {mehsullar[i].Qiymet,-5}azn |"));
+            }
             #endregion Mehsullara baxmaq
 
+            #region Alinacaq Mehsullar
+            Print("*************************************");
+            Print("Almaq isdediyiniz mehsullari daxil edin");
+            do
+            {
+                string mehsulAd = Input("Mehsul adini yazin : ");
+                double mehsulMiqdar = double.Parse(Input("Mehsul sayini ve ya cekisini yazin : "));
+                Print("*************************************");
+                for (int i = 0; i < mehsullar.Count; i++)
+                {
+                    if (mehsullar[i].Ad == mehsulAd)
+                    {
+                        mehsullar[i].Miqdar = mehsulMiqdar;
+                        alinanMehsullar.Add(mehsullar[i]);
+                    }
+                }
+            } while (Input("Yeniden mehsul almaq ucun 'H' yazin : ").ToUpper() == "H");
+            #endregion Alinacaq Mehsullar
 
-            //Print("| mehsul adi        |  miqdar  |  qiymet  |EDV  |toplam|");
-            //Print(String.Format($"| {a,-17} | {b,-8} | {v,-8} |{vf,-4} |{e,-6}|"));
+            #region Alinmis Mehsullar
+            Print("*************************************");
+            Print("| Mehsul adi        |  Miqdar  |  Qiymet  |EDV  |Toplam |");
+            foreach (var item in alinanMehsullar)
+            {
+                Print(String.Format($"| {item.Ad,-17} | {item.Miqdar,-8} | {item.Qiymet,-8} |{item.Edv,-3}% |{item.Qiymet * item.Miqdar,-4}azn|"));
+                toplamEdvDeyer.Add(item.EdvQaytarici() * item.Miqdar);
+                toplamQiymet.Add(item.Qiymet * item.Miqdar);
+            }
+            double a = 0;
+            double b = 0;
+            for (int i = 0; i < alinanMehsullar.Count; i++)
+            {
+                a += (double)toplamQiymet[i];
+                b += (double)toplamEdvDeyer[i];
+            }
+            Print("*************************************");
+            Print($"vergi edv                                        | {Math.Round(b, 2)} |");
+            Print($"yekun mebleg                                     | {a} |");
+            #endregion Alinmis Mehsullar
+
             #endregion
         }
-
         #region Methods
         static void Print(object value)
         {
