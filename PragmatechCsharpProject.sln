@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week5.Task", "Week5.Task\We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week6.Task", "Week6.Task\Week6.Task.csproj", "{98068C6D-3206-4478-9A90-6FF210743245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.Task", "Week7.Task\Week7.Task.csproj", "{C05E79B3-872D-405E-B3DF-F4182F9BEC6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7.Task", "Week7.Task\Week7.Task.csproj", "{C05E79B3-872D-405E-B3DF-F4182F9BEC6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
