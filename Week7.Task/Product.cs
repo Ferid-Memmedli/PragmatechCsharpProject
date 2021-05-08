@@ -7,9 +7,20 @@ using System.Threading.Tasks;
 
 namespace Week7.Task
 {
-    public abstract class Product
+    public abstract class IdGenerator
     {
-        public int Id { get; set; }
+        protected IdGenerator()
+        {
+            _id = counter;
+            counter += 1;
+        }
+        static int counter = 1;
+        int _id;
+        public int Id => _id;
+    }
+
+    public abstract class Product : IdGenerator
+    {
         public string Barcode { get; set; }
         public DateTime CreateDate { get; } = DateTime.Now;
         public string Brand { get; set; }
@@ -53,6 +64,5 @@ namespace Week7.Task
                     discountPrice = value;
             }
         }
-
     }
 }

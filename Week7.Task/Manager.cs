@@ -11,7 +11,7 @@ namespace Week7.Task
     {
         #region DataBase
 
-        static ArrayList _database;
+        private static readonly ArrayList _database;
         static Manager()
         {
             _database = new ArrayList();
@@ -48,19 +48,29 @@ namespace Week7.Task
                 }
             }
         }
-        public static void Update(int id)
+        public static void Update(int id, Product data)
         {
-            foreach (var item in _database)
+            if (_database != null && _database.Count > 0)
             {
-                Product product = (Product)item;
-                if (id == product.Id)
+                if (data != null && !string.IsNullOrEmpty(data.Barcode))
                 {
-                    product.Barcode = Input("Yeni Barcode Daxil Edin : ");
-                    product.Brand = Input("Yeni Brand Daxil Edin : ");
-                    product.Model = Input("Yeni Model Daxil Edin : ");
-                    product.DiscountPrice = int.Parse(Input("Yeni DiscountPrice Daxil Edin : "));
-                    product.SalePrice = int.Parse(Input("Yeni SalePrice Daxil Edin : "));
-                    product.PurchasePrice = int.Parse(Input("Yeni PurchasePrice Daxil Edin : "));
+                    foreach (var item in _database)
+                    {
+                        Product product = (Product)item;
+                        if (CheckBarcode(data.Barcode, id))
+                        {
+                            Console.WriteLine("Eyni mehsul var.");
+                            break;
+                        }
+                        else if (id == product.Id)
+                        {
+                            product.Barcode = data.Barcode;
+                            product.Brand = data.Brand;
+                            product.PurchasePrice = data.PurchasePrice;
+                            product.SalePrice = data.SalePrice;
+                            product.DiscountPrice = data.DiscountPrice;
+                        }
+                    }
                 }
             }
         }
@@ -96,12 +106,24 @@ namespace Week7.Task
             }
             return control;
         }
-        private static string Input(object value)
-        {
-            Console.Write(value);
-            return Console.ReadLine();
-        }
-        #endregion Methods
 
+        private static bool CheckBarcode(string barcode, int id)
+        {
+            bool control = false;
+
+            foreach (var item in _database)
+            {
+                Product tempProduct = (Product)item;
+
+                if (tempProduct != null && tempProduct.Barcode == barcode && tempProduct.Id != id)
+                {
+                    control = true;
+                    break;
+                }
+            }
+            return control;
+        }
+
+        #endregion Methods
     }
 }
