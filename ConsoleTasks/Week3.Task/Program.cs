@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 
+
 #region Task
 
 #region 1. Bal Ortalamasinin Hesablanmasi

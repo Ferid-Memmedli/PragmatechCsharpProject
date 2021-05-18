@@ -121,7 +121,7 @@ namespace Week6.Task
             } while (Input("Yeni mehsul elave edmek ucun 'H' yazin : ").ToUpper() == "H");
             #endregion Mehsul elave olunmasi
 
-            #region Mehsullara baxmaq
+            #region Mehsullara baxmaq "Menu"
             Print("*************************************");
             Print("Mehsullarimiz");
             Print("*************************************");
@@ -131,7 +131,7 @@ namespace Week6.Task
                 mehsullar[i].Id = i + 1;
                 Print(String.Format($"|{mehsullar[i].Id,-3} | {mehsullar[i].Ad,-17} | {mehsullar[i].Qiymet,-5}azn |"));
             }
-            #endregion Mehsullara baxmaq
+            #endregion Mehsullara baxmaq "Menu"
 
             #region Alinacaq Mehsullar
             Print("*************************************");

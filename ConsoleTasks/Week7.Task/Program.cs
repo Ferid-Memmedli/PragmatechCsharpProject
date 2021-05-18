@@ -45,21 +45,21 @@ namespace Week7.Task
           *
           */
 
-            Product laptop = new Laptop() { Barcode = "5465", Brand = "Toshiba", Ram = "4", PurchasePrice = 500, SalePrice = 750, DiscountPrice = 50 };
-            Product tv = new Tv() { Barcode = "5346", Brand = "Samsung", SmartTv = true, PurchasePrice = 1500, SalePrice = 1550, DiscountPrice = 58 };
-            Product tv1 = new Tv() { Barcode = "2324", Brand = "Samsung2", SmartTv = false, PurchasePrice = 2500, SalePrice = 2750, DiscountPrice = 54 };
-            Product tv2 = new Tv() { Barcode = "565", Brand = "Nokia", SmartTv = false, PurchasePrice = 200, SalePrice = 250, DiscountPrice = 10 };
+            //Product laptop = new Laptop() { Barcode = "5465", Brand = "Toshiba", Ram = "4", PurchasePrice = 500, SalePrice = 750, DiscountPrice = 50 };
+            //Product tv = new Tv() { Barcode = "5346", Brand = "Samsung", SmartTv = true, PurchasePrice = 1500, SalePrice = 1550, DiscountPrice = 58 };
+            //Product tv1 = new Tv() { Barcode = "2324", Brand = "Samsung2", SmartTv = false, PurchasePrice = 2500, SalePrice = 2750, DiscountPrice = 54 };
+            //Product tv2 = new Tv() { Barcode = "565", Brand = "Nokia", SmartTv = false, PurchasePrice = 200, SalePrice = 250, DiscountPrice = 10 };
 
 
-            Manager.Add(laptop);
-            Manager.Add(tv);
-            Manager.Add(tv1);
-            Console.WriteLine("Data Base-de Olan Mehsullar");
-            Manager.GetAll();
-            Console.WriteLine("Data Base-de Mehsullar Update Olunmasi");
-            Manager.Update(2, tv2);
-            Manager.GetAll();
-
+            //Manager.Add(laptop);
+            //Manager.Add(tv);
+            //Manager.Add(tv1);
+            //Console.WriteLine("Data Base-de Olan Mehsullar");
+            //Manager.GetAll();
+            //Console.WriteLine("Data Base-de Mehsullar Update Olunmasi");
+            //Manager.Update(2, tv2);
+            //Manager.GetAll();
         }
+
     }
 }
