@@ -27,7 +27,7 @@ namespace Calculator
             emeliyyat = ((Button)sender).Text;
             decimal eded = decimal.Parse(textBox1.Text);
             switch (old)
-            {                
+            {
                 case "+":
                     textBox1.Text = (cavab + eded).ToString(); break;
                 case "-":
