@@ -41,7 +41,7 @@ namespace PoolCalculation
             hovuz.Enabled = true;
             decimal kran1 = nud1Kiran.Value;
             decimal kran2 = nud2Kiran.Value;
-            decimal mutted = hecm /(kran1 + kran2);
+            decimal mutted = hecm / (kran1 + kran2);
             txtVaxt.Text = mutted.ToString();
         }
     }
