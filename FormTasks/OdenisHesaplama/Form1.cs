@@ -29,10 +29,12 @@ namespace OdenisHesaplama
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Product product = new Product();
-            product.Name = txtAd.Text;
-            product.Price = txtQiymet.Text;
-            products.Add(product);      
+            Product product = new Product
+            {
+                Name = txtAd.Text,
+                Price = txtQiymet.Text
+            };
+            products.Add(product);
             lstProduct.Items.Add(product.NamePrice());
             txtAd.Clear();
             txtQiymet.Clear();
@@ -50,12 +52,12 @@ namespace OdenisHesaplama
 
         private void btnHesaplama_Click(object sender, EventArgs e)
         {
-            foreach (var item in products)            
+            foreach (var item in products)
                 totalQiymet += double.Parse(item.Price);
-            
-            if (rbtnTelebeEndirimi.Checked)            
-                txtTotalQiymet.Text = $"Telebe Endirimi Olundu : {totalQiymet - (totalQiymet * 0.1)}azn";           
-            else if (rbtnPensiyanerEndirimi.Checked)            
+
+            if (rbtnTelebeEndirimi.Checked)
+                txtTotalQiymet.Text = $"Telebe Endirimi Olundu : {totalQiymet - (totalQiymet * 0.1)}azn";
+            else if (rbtnPensiyanerEndirimi.Checked)
                 txtTotalQiymet.Text = $"Pensiyaner Endirimi Olundu : {totalQiymet - (totalQiymet * 0.2)}azn";
             else
                 txtTotalQiymet.Text = $"Endirimsiz : {totalQiymet}azn";
