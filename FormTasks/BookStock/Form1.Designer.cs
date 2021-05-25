@@ -44,6 +44,8 @@
             // 
             // cmbBooks
             // 
+            this.cmbBooks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbBooks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBooks.FormattingEnabled = true;
             this.cmbBooks.Location = new System.Drawing.Point(12, 12);
             this.cmbBooks.Name = "cmbBooks";
@@ -61,6 +63,7 @@
             // 
             // btnGorset
             // 
+            this.btnGorset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGorset.Location = new System.Drawing.Point(96, 41);
             this.btnGorset.Name = "btnGorset";
             this.btnGorset.Size = new System.Drawing.Size(75, 23);

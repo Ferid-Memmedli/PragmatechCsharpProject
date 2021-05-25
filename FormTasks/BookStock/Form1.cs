@@ -52,17 +52,12 @@ namespace BookStock
 
         private void btnGorset_Click(object sender, EventArgs e)
         {
-            foreach (var item in books)
-            {
-                if (cmbBooks.SelectedItem == item.Name)
-                {
-                    imgBook.ImageLocation = item.Img;
-                    txtAuthor.Text = item.Author;
-                    txtCategory.Text = item.Category;
-                    txtStock.Text = item.StockCount.ToString();
-                    txtDesc.Text = item.Description;
-                }
-            }
+            var book = books.Find(i => i.Name == cmbBooks.SelectedItem);
+            imgBook.ImageLocation = book.Img;
+            txtAuthor.Text = book.Author;
+            txtCategory.Text = book.Category;
+            txtStock.Text = book.StockCount.ToString();
+            txtDesc.Text = book.Description;
         }
     }
 }
