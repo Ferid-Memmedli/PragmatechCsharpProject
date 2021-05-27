@@ -19,6 +19,7 @@ namespace PizzaOrder
         {
             InitializeComponent();
         }
+
         public void Sifirlama()
         {
             foreach (CheckBox item in gbPizzaTerkibi.Controls)
@@ -33,6 +34,7 @@ namespace PizzaOrder
             pizzaSay.Value = 1;
 
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             PizzaOlcu balaca = new PizzaOlcu { Olcu = "Balaca", Qiymet = 10 };
@@ -63,26 +65,32 @@ namespace PizzaOrder
             Icecek icecek = (Icecek)cmbIcecek.SelectedItem;
             icecek.Say = (double)icecekSay.Value;
 
-            Pizza pizza = new Pizza();
-            pizza.PizzaOlcusu = pizzaOlcu;
-            pizza.Icecekler = icecek;
+            Pizza pizza = new Pizza
+            {
+                PizzaOlcusu = pizzaOlcu,
+                Icecekler = icecek
+            };
             foreach (CheckBox item in gbPizzaTerkibi.Controls)
             {
                 if (item.Checked)
                     pizza.Terkib.Add(item.Text);
             }
-
-            Musteri musteri = new Musteri
+            Musteri musteri = new Musteri();
+            if (string.IsNullOrWhiteSpace(txtAd.Text) || string.IsNullOrWhiteSpace(txtSoyad.Text) || string.IsNullOrWhiteSpace(txtAdres.Text) || string.IsNullOrWhiteSpace(txtTelefon.Text))
             {
-                Ad = txtAd.Text,
-                Soyad = txtSoyad.Text,
-                Adres = txtAdres.Text,
-                Telefon = txtTelefon.Text,
-                Pizza = pizza
-            };
-
-            lstSifarisler.Items.Add(musteri);
-            Sifirlama();
+                MessageBox.Show("Melumatlari Tam Doldurun", "Xeta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Sifirlama();
+            }
+            else
+            {
+                musteri.Ad = txtAd.Text;
+                musteri.Soyad = txtSoyad.Text;
+                musteri.Adres = txtAdres.Text;
+                musteri.Telefon = txtTelefon.Text;
+                musteri.Pizza = pizza;
+                lstSifarisler.Items.Add(musteri);
+                Sifirlama();
+            }
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
