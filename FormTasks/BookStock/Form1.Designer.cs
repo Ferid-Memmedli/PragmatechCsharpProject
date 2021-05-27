@@ -113,6 +113,7 @@
             // 
             this.txtAuthor.Location = new System.Drawing.Point(248, 17);
             this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.ReadOnly = true;
             this.txtAuthor.Size = new System.Drawing.Size(178, 23);
             this.txtAuthor.TabIndex = 7;
             // 
@@ -120,6 +121,7 @@
             // 
             this.txtCategory.Location = new System.Drawing.Point(248, 46);
             this.txtCategory.Name = "txtCategory";
+            this.txtCategory.ReadOnly = true;
             this.txtCategory.Size = new System.Drawing.Size(178, 23);
             this.txtCategory.TabIndex = 8;
             // 
@@ -127,6 +129,7 @@
             // 
             this.txtStock.Location = new System.Drawing.Point(248, 76);
             this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
             this.txtStock.Size = new System.Drawing.Size(178, 23);
             this.txtStock.TabIndex = 9;
             // 
@@ -134,6 +137,7 @@
             // 
             this.txtDesc.Location = new System.Drawing.Point(177, 120);
             this.txtDesc.Name = "txtDesc";
+            this.txtDesc.ReadOnly = true;
             this.txtDesc.Size = new System.Drawing.Size(249, 169);
             this.txtDesc.TabIndex = 10;
             this.txtDesc.Text = "";

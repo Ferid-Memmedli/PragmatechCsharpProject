@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PoolCalculation
@@ -18,12 +11,11 @@ namespace PoolCalculation
         //- ikinci groupBox icerisinde ise iki eded su kraninin deqiqede nece kub/metr doldurdugu daxil edilir(numericUpDown),
         //- ilk once hovuzun hecmi hesablanan groupBox active olmalidir, yeni su kranlari ancaq hovuzun hecmi hesablandiqdan sonra aktiv olacaq
         //- ikinci group box icerisinde hesabla-ya klik olunan zaman 2 su kranin hovuzu neqeder vaxta doldurdugunu gostermeliyik.
-        decimal hecm = 0;
+        decimal capacity = 0;
         public Form1()
         {
             InitializeComponent();
         }
-
         private void btnHovuz_Click(object sender, EventArgs e)
         {
             vaxt.Enabled = true;
@@ -31,18 +23,18 @@ namespace PoolCalculation
             decimal derinlik = nudDerinlik.Value;
             decimal en = nudEn.Value;
             decimal uzunluk = nudUzunluk.Value;
-            hecm = derinlik * en * uzunluk;
-            txtHecm.Text = hecm.ToString();
+            capacity = Pool.Capacity(derinlik, uzunluk, en);
+            txtHecm.Text = capacity.ToString();
         }
 
         private void btnVaxt_Click(object sender, EventArgs e)
         {
             vaxt.Enabled = false;
             hovuz.Enabled = true;
-            decimal kran1 = nud1Kiran.Value;
-            decimal kran2 = nud2Kiran.Value;
-            decimal mutted = hecm / (kran1 + kran2);
-            txtVaxt.Text = mutted.ToString();
+            decimal waterPipe = nud1Kiran.Value;
+            decimal waterPipe2 = nud2Kiran.Value;
+            decimal time = Pool.ChargingTime(capacity, waterPipe, waterPipe2);
+            txtVaxt.Text = time.ToString();
         }
     }
 }

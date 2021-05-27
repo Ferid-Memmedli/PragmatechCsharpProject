@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtQiymet = new System.Windows.Forms.TextBox();
             this.btnHesaplama = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtQiymet = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lstProduct = new System.Windows.Forms.ListBox();
@@ -43,6 +43,15 @@
             this.txtTotalQiymet = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txtQiymet
+            // 
+            this.txtQiymet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtQiymet.Location = new System.Drawing.Point(58, 60);
+            this.txtQiymet.MaxLength = 10;
+            this.txtQiymet.Name = "txtQiymet";
+            this.txtQiymet.Size = new System.Drawing.Size(108, 23);
+            this.txtQiymet.TabIndex = 7;
             // 
             // btnHesaplama
             // 
@@ -103,16 +112,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product Add";
             // 
-            // txtQiymet
-            // 
-            this.txtQiymet.Location = new System.Drawing.Point(58, 60);
-            this.txtQiymet.Name = "txtQiymet";
-            this.txtQiymet.Size = new System.Drawing.Size(108, 23);
-            this.txtQiymet.TabIndex = 7;
-            // 
             // txtAd
             // 
+            this.txtAd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAd.Location = new System.Drawing.Point(58, 22);
+            this.txtAd.MaxLength = 10;
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(108, 23);
             this.txtAd.TabIndex = 6;
@@ -141,6 +145,7 @@
             // 
             this.rbtnHecbiri.AutoSize = true;
             this.rbtnHecbiri.Checked = true;
+            this.rbtnHecbiri.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnHecbiri.Location = new System.Drawing.Point(366, 12);
             this.rbtnHecbiri.Name = "rbtnHecbiri";
             this.rbtnHecbiri.Size = new System.Drawing.Size(63, 19);
@@ -152,6 +157,7 @@
             // rbtnTelebeEndirimi
             // 
             this.rbtnTelebeEndirimi.AutoSize = true;
+            this.rbtnTelebeEndirimi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnTelebeEndirimi.Location = new System.Drawing.Point(366, 34);
             this.rbtnTelebeEndirimi.Name = "rbtnTelebeEndirimi";
             this.rbtnTelebeEndirimi.Size = new System.Drawing.Size(105, 19);
@@ -162,6 +168,7 @@
             // rbtnPensiyanerEndirimi
             // 
             this.rbtnPensiyanerEndirimi.AutoSize = true;
+            this.rbtnPensiyanerEndirimi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnPensiyanerEndirimi.Location = new System.Drawing.Point(366, 59);
             this.rbtnPensiyanerEndirimi.Name = "rbtnPensiyanerEndirimi";
             this.rbtnPensiyanerEndirimi.Size = new System.Drawing.Size(129, 19);

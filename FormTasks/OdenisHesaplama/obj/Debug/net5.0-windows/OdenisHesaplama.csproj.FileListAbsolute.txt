@@ -5,7 +5,6 @@ C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesapl
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\bin\Debug\net5.0-windows\OdenisHesaplama.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\bin\Debug\net5.0-windows\ref\OdenisHesaplama.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\bin\Debug\net5.0-windows\OdenisHesaplama.pdb
-C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.csprojAssemblyReference.cache
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.Form1.resources
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.csproj.GenerateResource.cache
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,4 @@ C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesapl
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\ref\OdenisHesaplama.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.pdb
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.genruntimeconfig.cache
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\OdenisHesaplama\obj\Debug\net5.0-windows\OdenisHesaplama.csproj.AssemblyReference.cache

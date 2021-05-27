@@ -12,13 +12,13 @@
 */
 
 //******************************************************************  HELLI  **********************************************************************
-/*
+
 int[] intArray = { 2, 9, 4, 3, 5, 1, 7 };
 
 SortMinToMax(intArray);
 
 PrintArray(intArray);
-*/
+
 #endregion 1. artan sira
 
 #region 2. azalan sira

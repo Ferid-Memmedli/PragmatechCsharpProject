@@ -13,10 +13,8 @@ namespace OdenisHesaplama
     //  3. calculation of amount payable
     //- istifadeci terefinden productin adi ve qiymet daxil edilir, daxil edilen bu productlar
     //- listBoxda adi ve qiymeti olaraq gosterilmelidir, butun mehsullarda 18 % edv var ve bundan elave
-
     //- Telebe ve ya pensiyaner endirimi istifadeci terefinden "secilerse" umumi meblege samil edilecek.
     //- Hesabla button-a klik olunan zaman asagdaki textbox-da total cixmalidir
-
     //- Temizle button-a klik olunan zaman ise elementlerdeki datalar temizlenecek.
     public partial class Form1 : Form
     {
