@@ -12,6 +12,12 @@ namespace CustomerAdd
         public string Soyad { get; set; }
         public string Email { get; set; }
         public string Nomre { get; set; }
+        public string FullName1 => Ad + " " + Soyad;
+        public override string ToString()
+        {
+            return Ad + " " + Soyad;
+        }
+
         public string FullName()
         {
             return Ad + " " + Soyad;

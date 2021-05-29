@@ -5,7 +5,6 @@ C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\b
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\bin\Release\net5.0-windows\PizzaOrder.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\bin\Release\net5.0-windows\ref\PizzaOrder.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\bin\Release\net5.0-windows\PizzaOrder.pdb
-C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.csprojAssemblyReference.cache
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.Form1.resources
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.csproj.GenerateResource.cache
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,4 @@ C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\o
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\ref\PizzaOrder.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.pdb
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.genruntimeconfig.cache
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\PizzaOrder\obj\Release\net5.0-windows\PizzaOrder.Properties.Resources.resources

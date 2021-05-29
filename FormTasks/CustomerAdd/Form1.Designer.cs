@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.lstboxDbShow = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,11 +155,15 @@
             this.panel1.Size = new System.Drawing.Size(203, 202);
             this.panel1.TabIndex = 11;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Visible = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 227);
+            this.ClientSize = new System.Drawing.Size(469, 299);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lstboxDbShow);
@@ -186,6 +192,7 @@
         private System.Windows.Forms.ListBox lstboxDbShow;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 

@@ -26,8 +26,7 @@ namespace CustomerAdd
         private void btnMusteriSave_Click(object sender, EventArgs e)
         {
             var uzunluq = musteriler.Count;
-            DialogResult cavab;
-            cavab = MessageBox.Show("Yeni Musteri Elave Edilsinmi?", "Xebardarliq", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult cavab = MessageBox.Show("Yeni Musteri Elave Edilsinmi?", "Xebardarliq", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (cavab == DialogResult.Yes)
             {
                 Musteri musteri = new Musteri()
@@ -38,13 +37,27 @@ namespace CustomerAdd
                     Nomre = txtNomre.Text
                 };
                 musteriler.Add(musteri);
-                MessageBox.Show($"Musteri Sayi : {uzunluq + 1}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Musteri Sayi : {uzunluq + 1}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             lstboxDbShow.Items.Clear();
-            foreach (var item in musteriler)
+            //foreach (var item in musteriler)
+            //{
+            //    //lstboxDbShow.Items.Add(item.FullName());
+            //}
+            lstboxDbShow.DataSource = musteriler;
+            ClearTextBox();
+            notifyIcon = new NotifyIcon()
             {
-                lstboxDbShow.Items.Add(item.FullName());
-            }
+                BalloonTipText = $"Musteri sayi : {uzunluq + 1}",
+                BalloonTipTitle = "Information",
+                Icon = SystemIcons.Information,
+                Visible = true
+            };
+            notifyIcon.ShowBalloonTip(1500);
+        }
+
+        private void ClearTextBox()
+        {
             txtAd.Clear();
             txtSoyad.Clear();
             txtEmail.Clear();

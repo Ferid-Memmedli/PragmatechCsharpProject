@@ -24,7 +24,7 @@ using System.Collections;
  *
  */
 
-
+/*
 //Helli
 decimal netice1, netice2, netice3, ortalama;
 print("Ortalamanin Hesaplanmasi");
@@ -39,7 +39,7 @@ string netice = ortalama > 45 ? $"Sizin ortalamaniz : {ortalama} ve 45-den boyuk
     (ortalama == 45 ? "Sizin ortalamaniz 45-e beraberdir" : $"Sizin ortalamaniz : {ortalama} ve 45-den kicikdir");
 print("Ortalama 45-e beraber ve ya boyukdurmu?");
 print(netice);
-
+*/
 #endregion
 
 #region Task 1.2
@@ -457,6 +457,7 @@ for (int i = 1; i < 11; i++)
 #endregion
 
 #region Methods
+/*
 static void print(object value)
 {
     Console.WriteLine(value);
@@ -466,5 +467,5 @@ static string input(string value)
 {
     Console.Write(value);
     return Console.ReadLine();
-}
+}*/
 #endregion
