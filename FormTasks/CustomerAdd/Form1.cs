@@ -18,7 +18,7 @@ namespace CustomerAdd
     //- formda olan listBox-da musterinin adi soyadi gosterilir.dizayn isteyinize gore seliqeli sekilde sadece ola biler.
     public partial class Form1 : Form
     {
-        List<Musteri> musteriler = new List<Musteri>();
+        public static readonly List<Musteri> musteriler = new List<Musteri>();
         public Form1()
         {
             InitializeComponent();
@@ -37,15 +37,12 @@ namespace CustomerAdd
                     Nomre = txtNomre.Text
                 };
                 musteriler.Add(musteri);
-                //MessageBox.Show($"Musteri Sayi : {uzunluq + 1}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            //lstboxDbShow.DataSource = musteriler;
             lstboxDbShow.Items.Clear();
-            //foreach (var item in musteriler)
-            //{
-            //    //lstboxDbShow.Items.Add(item.FullName());
-            //}
-            lstboxDbShow.DataSource = musteriler;
-            ClearTextBox();
+            foreach (var item in musteriler)
+                lstboxDbShow.Items.Add(item);
+            #region notify
             notifyIcon = new NotifyIcon()
             {
                 BalloonTipText = $"Musteri sayi : {uzunluq + 1}",
@@ -53,9 +50,10 @@ namespace CustomerAdd
                 Icon = SystemIcons.Information,
                 Visible = true
             };
-            notifyIcon.ShowBalloonTip(1500);
+            notifyIcon.ShowBalloonTip(1000);
+            #endregion
+            ClearTextBox();
         }
-
         private void ClearTextBox()
         {
             txtAd.Clear();

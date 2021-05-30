@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TodoAppForm/1.0.0": {
+        "runtime": {
+          "TodoAppForm.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TodoAppForm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

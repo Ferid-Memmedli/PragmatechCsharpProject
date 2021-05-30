@@ -19,7 +19,6 @@ namespace PizzaOrder
         {
             InitializeComponent();
         }
-
         public void Sifirlama()
         {
             foreach (CheckBox item in gbPizzaTerkibi.Controls)
@@ -32,13 +31,10 @@ namespace PizzaOrder
             icecekSay.Value = 1;
             pizzaSay.Value = 1;
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (var item in DataPizzaOlcu.data)
-                cmbPizzaOlcu.Items.Add(item);
-            foreach (var item in DataIcecek.dataIcecek)
-                cmbIcecek.Items.Add(item);
+            cmbPizzaOlcu.DataSource = DataPizzaOlcu.data;
+            cmbIcecek.DataSource = DataIcecek.dataIcecek;
         }
 
         private void btnSifarisAl_Click(object sender, EventArgs e)
