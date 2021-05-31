@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TodoAppForm.Entities.Abstract
 {
-    public interface IEntity<T>
+    public abstract class BaseEntity
+    {
+
+    }
+
+    public abstract class BaseEntity<T> : BaseEntity, IEntity<T>
     {
         public T Id { get; set; }
     }

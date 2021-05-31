@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TodoAppForm.Entities.Concrete;
 
-namespace TodoAppForm.DataAcces.Abstract
+namespace TodoAppForm.Bussiness.Abstract
 {
-    public interface IUserDal
+    public interface IUserService
     {
-        UserEntity GetUser(string username, string password);
+        public UserEntity GetUser(string username, string password);
         void Add(UserEntity data);
         List<UserEntity> GetAll();
     }

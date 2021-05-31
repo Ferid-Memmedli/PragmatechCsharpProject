@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbOperation = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnGetAll = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.altPanel = new System.Windows.Forms.Panel();
+            this.lblDateTime = new System.Windows.Forms.Label();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.gbOperation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.altPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,7 +51,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(147, 524);
+            this.panel1.Size = new System.Drawing.Size(147, 466);
             this.panel1.TabIndex = 0;
             // 
             // gbOperation
@@ -58,7 +62,7 @@
             this.gbOperation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbOperation.Location = new System.Drawing.Point(0, 137);
             this.gbOperation.Name = "gbOperation";
-            this.gbOperation.Size = new System.Drawing.Size(147, 387);
+            this.gbOperation.Size = new System.Drawing.Size(147, 329);
             this.gbOperation.TabIndex = 1;
             this.gbOperation.TabStop = false;
             this.gbOperation.Text = "Operation";
@@ -110,20 +114,35 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // altPanel
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(147, 407);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(763, 117);
-            this.panel2.TabIndex = 1;
+            this.altPanel.Controls.Add(this.lblDateTime);
+            this.altPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.altPanel.Location = new System.Drawing.Point(147, 431);
+            this.altPanel.Name = "altPanel";
+            this.altPanel.Size = new System.Drawing.Size(887, 35);
+            this.altPanel.TabIndex = 1;
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.AutoSize = true;
+            this.lblDateTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDateTime.Location = new System.Drawing.Point(750, 11);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(34, 15);
+            this.lblDateTime.TabIndex = 0;
+            this.lblDateTime.Text = "Tarix";
+            // 
+            // timerDateTime
+            // 
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
             // TodoAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 524);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1034, 466);
+            this.Controls.Add(this.altPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
@@ -134,6 +153,8 @@
             this.panel1.ResumeLayout(false);
             this.gbOperation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.altPanel.ResumeLayout(false);
+            this.altPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -146,7 +167,9 @@
         private System.Windows.Forms.Button btnGetAll;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel altPanel;
+        private System.Windows.Forms.Label lblDateTime;
+        private System.Windows.Forms.Timer timerDateTime;
     }
 }
 

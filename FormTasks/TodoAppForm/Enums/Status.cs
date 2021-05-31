@@ -9,7 +9,9 @@ namespace TodoAppForm.Enums
     public enum Status
     {
         Pending = 1,
-        Canceled = 2,
-        Suspended = 3
+        Completed = 2,
+        InCompleted = 3,
+        Canceled = 4,
+        Suspended = 5
     }
 }

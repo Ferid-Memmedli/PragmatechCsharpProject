@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WinForms.TodoApp.Entities.Abstract;
+using TodoAppForm.Entities.Abstract;
 
-namespace WinForms.TodoApp.Entities.Concrete
+namespace TodoAppForm.Entities.Concrete
 {
     public class UserEntity : BaseEntity<Guid>
     {

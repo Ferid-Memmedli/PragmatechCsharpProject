@@ -44,9 +44,10 @@ namespace TodoAppForm
             this.btnLogin.Location = new System.Drawing.Point(319, 161);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(91, 26);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUsername
             // 
@@ -54,6 +55,8 @@ namespace TodoAppForm
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(165, 23);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // txtPassword
             // 
@@ -62,6 +65,8 @@ namespace TodoAppForm
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(165, 23);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // pictureBox1
             // 
@@ -102,7 +107,7 @@ namespace TodoAppForm
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";

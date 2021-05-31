@@ -18,3 +18,5 @@ C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\TodoAppForm\
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\TodoAppForm\obj\Debug\net5.0-windows\ref\TodoAppForm.dll
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\TodoAppForm\obj\Debug\net5.0-windows\TodoAppForm.pdb
 C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\TodoAppForm\obj\Debug\net5.0-windows\TodoAppForm.genruntimeconfig.cache
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\TodoAppForm\obj\Debug\net5.0-windows\TodoAppForm.GetAllForm.resources
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\FormTasks\TodoAppForm\obj\Debug\net5.0-windows\TodoAppForm.NewTodoForm.resources

@@ -1,59 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using WinForms.TodoApp.DataAcces.Abstract;
-using WinForms.TodoApp.Entities.Concrete;
+using TodoAppForm.DataAcces.Abstract;
+using TodoAppForm.Entities.Concrete;
 
-namespace WinForms.TodoApp.DataAcces.Concrete
+namespace TodoAppForm.DataAcces.Concrete
 {
     public class InMemoryUserDal : IUserDal
     {
-        #region fields
-        private static readonly List<UserEntity> _userEntities;
-        #endregion
-
-        #region ctor         
+        private static readonly List<UserEntity> _userEntities;  //Virtual DataBase
         static InMemoryUserDal()
         {
             _userEntities = new List<UserEntity>
             {
-                new UserEntity {Id = Guid.NewGuid(), Username = "user1", Password = "1234"}
+                new UserEntity {Id = Guid.NewGuid(), Username = "user", Password = "12"}
             };
-        }
-        #endregion
-
+        } //InMemoryUserDal Instance alinan zaman Virtual DataBase-de Instance almaq ve UserData yerlesdirmeq
+        public UserEntity GetUser(string username, string password)
+        {
+            var user = _userEntities.SingleOrDefault(i => i.Username == username && i.Password == password);
+            return user;
+        } //DataBase-den Useri tapmaq
         public List<UserEntity> GetAll()
         {
             return _userEntities;
-        }
+        }  //Virtual DataBase List Qaytarir
         public void Add(UserEntity data)
         {
             _userEntities.Add(data);
-        }
-    }
-
-    public class InMemoryTodoDal : ITodoDal
-    {
-        #region fields
-        private static readonly List<TodoEntity> _todoEntities;
-        #endregion
-
-        #region ctor
-        static InMemoryTodoDal()
-        {
-            _todoEntities = new List<TodoEntity>();
-        }
-        #endregion
-
-        public int Count()
-        {
-            return _todoEntities.Count;
-        }
-        public int Add(TodoEntity data)
-        {
-            _todoEntities.Add(data);
-            return 1;
-        }
+        } // DataBase Yeni User Elave edir
     }
 }

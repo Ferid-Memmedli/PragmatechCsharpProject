@@ -1,41 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WinForms.TodoApp.Bussiness.Abstract;
-using WinForms.TodoApp.DataAcces.Abstract;
-using WinForms.TodoApp.DataAcces.Concrete;
-using WinForms.TodoApp.Entities.Concrete;
+using TodoAppForm.Bussiness.Abstract;
+using TodoAppForm.DataAcces.Abstract;
+using TodoAppForm.Entities.Concrete;
+using TodoAppForm.Enums;
 
-namespace WinForms.TodoApp.Bussiness.Concrete
+namespace TodoAppForm.Bussiness.Concrete
 {
     public class TodoService : ITodoService
     {
-        #region fields
-        private readonly ITodoDal _todoDal;
-        #endregion
-
-        #region ctor
+        private readonly ITodoDal _todoDal;  //Base Class Olmalidi
         public TodoService(ITodoDal todoDal)
         {
             _todoDal = todoDal;
         }
-        #endregion
-
-        public int Count()
-        {
-            return _todoDal.Count();
-        }
-
         public int Add(TodoEntity data)
         {
             return _todoDal.Add(data);
-        }
-
+        }  //Virtual DataBase Data Add Edir.Returun olaraq : 1 qaytarir eks teqdirde : 0
+        public int Count()
+        {
+            return _todoDal.Count();
+        }   //DataBase Daxilinde Data Sayi Qaytarir
         public List<TodoEntity> GetAll()
         {
-            throw new NotImplementedException();
-        }
+            return _todoDal.GetAll();
+        }   //Virtual DataBase List Qaytarir
+        public List<TodoEntity> GetAll(Status status)
+        {
+            return _todoDal.GetAll(status);
+        }  //DataBase-den Userleri Statusuna uygun filtirlemeq ve List qaytarmaq
     }
 }
