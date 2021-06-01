@@ -43,5 +43,9 @@ namespace TodoAppForm.DataAcces.Concrete
         {
             return _todoEntities.Where(i => i.Status == status).ToList();
         }   //DataBase-den Userleri Statusuna uygun filtirlemeq ve List qaytarmaq
+        public List<TodoEntity> GetAll(ImportanceLevel importanceLevel)
+        {
+            return _todoEntities.Where(i => i.ImportanceLevel == importanceLevel).ToList();
+        }  //DataBase-den Userleri ImportanceLevel uygun filtirlemeq ve List qaytarmaq
     }
 }

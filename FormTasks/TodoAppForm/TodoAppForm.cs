@@ -40,6 +40,7 @@ namespace TodoAppForm
             };
             loginForm.Show();  //Login Formun Ekrana Getirilmesi
         }
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["NewTodoForm"] != null)
@@ -58,6 +59,7 @@ namespace TodoAppForm
                 form.Show();
             }
         }
+
         private void btnGetAll_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["getAllForm"] != null)
@@ -74,23 +76,23 @@ namespace TodoAppForm
                     getAllForm form = new getAllForm();
                     form.MdiParent = Application.OpenForms["TodoAppForm"];
                     form.StartPosition = FormStartPosition.CenterScreen;
-                    GroupBox listGroupBox = (GroupBox)form.Controls["gbList"];
-                    DataGridView dataGridView = (DataGridView)listGroupBox.Controls["dataGridView"];
-                    dataGridView.DataSource = null;
                     form.Show();
                 }
                 else
                     MessageBox.Show(GlobalConstants.EmptyList, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();  //Esas Appdan Exit edilmesi
         }
+
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
             lblDateTime.Text = DateTime.Now.ToString("g");
         }
+
         #endregion
     }
 }

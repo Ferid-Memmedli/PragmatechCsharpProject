@@ -31,5 +31,9 @@ namespace TodoAppForm.Bussiness.Concrete
         {
             return _todoDal.GetAll(status);
         }  //DataBase-den Userleri Statusuna uygun filtirlemeq ve List qaytarmaq
+        public List<TodoEntity> GetAll(ImportanceLevel importanceLevel)
+        {
+            return _todoDal.GetAll(importanceLevel);
+        }   //DataBase-den Userleri ImportanceLevel uygun filtirlemeq ve List qaytarmaq
     }
 }

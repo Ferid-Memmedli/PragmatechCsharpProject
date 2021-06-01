@@ -36,10 +36,10 @@ namespace TodoAppForm
             this.label3 = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtImportance = new System.Windows.Forms.TextBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.cmbImportanceLevel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -108,16 +108,6 @@ namespace TodoAppForm
             this.label4.TabIndex = 0;
             this.label4.Text = "Importance Level";
             // 
-            // txtImportance
-            // 
-            this.txtImportance.Location = new System.Drawing.Point(131, 302);
-            this.txtImportance.Multiline = true;
-            this.txtImportance.Name = "txtImportance";
-            this.txtImportance.Size = new System.Drawing.Size(319, 23);
-            this.txtImportance.TabIndex = 4;
-            this.txtImportance.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.txtImportance.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
             // cmbStatus
             // 
             this.cmbStatus.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -148,15 +138,25 @@ namespace TodoAppForm
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // cmbImportanceLevel
+            // 
+            this.cmbImportanceLevel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbImportanceLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbImportanceLevel.FormattingEnabled = true;
+            this.cmbImportanceLevel.Location = new System.Drawing.Point(131, 302);
+            this.cmbImportanceLevel.Name = "cmbImportanceLevel";
+            this.cmbImportanceLevel.Size = new System.Drawing.Size(319, 23);
+            this.cmbImportanceLevel.TabIndex = 7;
+            // 
             // NewTodoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 409);
+            this.Controls.Add(this.cmbImportanceLevel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.txtImportance);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtShort);
             this.Controls.Add(this.txtDesc);
@@ -183,9 +183,9 @@ namespace TodoAppForm
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtImportance;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ComboBox cmbImportanceLevel;
     }
 }

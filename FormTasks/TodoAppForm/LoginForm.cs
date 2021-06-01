@@ -18,10 +18,6 @@ namespace TodoAppForm
 {
     public partial class LoginForm : Form
     {
-        #region Fields
-
-        #endregion
-
         #region Ctors
         public LoginForm()
         {
@@ -56,16 +52,19 @@ namespace TodoAppForm
                 GlobalMethods.Clear(this);
             }
         }
+
         private void txtUsername_Leave(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             textBox.BackColor = Color.White;
         }
+
         private void txtUsername_Enter(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             textBox.BackColor = Color.LightGray;
         }
+
         #endregion
     }
 }

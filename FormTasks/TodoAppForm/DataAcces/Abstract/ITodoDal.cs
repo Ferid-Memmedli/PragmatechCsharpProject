@@ -14,5 +14,6 @@ namespace TodoAppForm.DataAcces.Abstract
         int Add(TodoEntity data);
         List<TodoEntity> GetAll();
         List<TodoEntity> GetAll(Status status);
+        List<TodoEntity> GetAll(ImportanceLevel importanceLevel);
     }
 }

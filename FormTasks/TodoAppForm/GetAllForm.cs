@@ -29,32 +29,64 @@ namespace TodoAppForm
         {
             dataGridView.DataSource = _todoService.GetAll();
             dataGridView.Columns["Id"].Visible = false;
+            lblCount.Text = _todoService.Count().ToString();
         }
+
         private void btnAll_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = _todoService.GetAll();
-            dataGridView.Columns["Id"].Visible = false;
+        }
+
+
+        private void btnSuspended_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = _todoService.GetAll(Status.Suspended);
         }
         private void btnPending_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = _todoService.GetAll(Status.Pending);
-            dataGridView.Columns["Id"].Visible = false;
         }
+
         private void btnCompleted_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = _todoService.GetAll(Status.Completed);
-            dataGridView.Columns["Id"].Visible = false;
         }
+
         private void btnCanceled_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = _todoService.GetAll(Status.Canceled);
-            dataGridView.Columns["Id"].Visible = false;
         }
+
         private void btnInCompleted_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = _todoService.GetAll(Status.InCompleted);
-            dataGridView.Columns["Id"].Visible = false;
         }
+
+        private void btnGeneralImportant_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = _todoService.GetAll(ImportanceLevel.GeneralImportant);
+        }
+
+        private void btnLessImportant_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = _todoService.GetAll(ImportanceLevel.LessImportant);
+        }
+
+        private void btnUnimportant_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = _todoService.GetAll(ImportanceLevel.Unimportant);
+        }
+
+        private void btnImportant_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = _todoService.GetAll(ImportanceLevel.Important);
+        }
+
+        private void btnVeryImportant_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = _todoService.GetAll(ImportanceLevel.VeryImportant);
+        }
+
         #endregion
     }
 }

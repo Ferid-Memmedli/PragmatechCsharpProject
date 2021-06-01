@@ -32,11 +32,13 @@ namespace TodoAppForm
         private void NewTodoForm_Load(object sender, EventArgs e)
         {
             cmbStatus.DataSource = Enum.GetValues(typeof(Status));
+            cmbImportanceLevel.DataSource = Enum.GetValues(typeof(ImportanceLevel));
         }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             int result = 0;
-            if (!GlobalMethods.TextBoxIsNullOrEmpty(this) && int.TryParse(txtImportance.Text,out int importance))
+            if (!GlobalMethods.TextBoxIsNullOrEmpty(this))
             {
                 result = _todoService.Add(new TodoEntity 
                 {
@@ -44,41 +46,25 @@ namespace TodoAppForm
                     Title = txtTitle.Text,
                     ShortDescription = txtShort.Text,
                     Description = txtDesc.Text,
-                    ImportanceLevel = importance,
+                    ImportanceLevel = (ImportanceLevel)cmbImportanceLevel.SelectedItem,
                     Status = (Status)cmbStatus.SelectedItem 
                 });
             }
 
-
-            if (result == 1)
+            if (result > 0)
             {
                 MessageBox.Show(GlobalConstants.AddSuccess, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Information);
                 DialogResult dialogResult = MessageBox.Show (GlobalConstants.AddOperationAgain,GlobalConstants.CaptionQuestion,MessageBoxButtons.YesNo,MessageBoxIcon.Question );
                 if (dialogResult == DialogResult.Yes)
-                    GlobalMethods.Clear(this);
+                    GlobalMethods.Clear(this); 
                 else
                 {
-                    Form getAllForm = Application.OpenForms["getAllForm"];
-                    if (getAllForm == null)
-                    {
-                        getAllForm = new getAllForm();
-                        getAllForm.MdiParent = Application.OpenForms["TodoAppForm"];
-                        getAllForm.StartPosition = FormStartPosition.CenterScreen;
-                        GroupBox listGroupBox = (GroupBox)getAllForm.Controls["gbList"];
-                        DataGridView dataGridView = (DataGridView)listGroupBox.Controls["dataGridView"];
-                        dataGridView.DataSource = null;
-                        getAllForm.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        GroupBox listGroupBox = (GroupBox)getAllForm.Controls["gbList"];
-                        DataGridView dataGridView = (DataGridView)listGroupBox.Controls["dataGridView"];
-                        dataGridView.DataSource = null;
-                        this.Close();
-                    }
+                    Form getAllForm = new getAllForm();
+                    getAllForm.MdiParent = Application.OpenForms["TodoAppForm"];
+                    getAllForm.StartPosition = FormStartPosition.CenterScreen;
+                    getAllForm.Show();
+                    this.Close();
                 }
-
             }
             else
             {
@@ -86,16 +72,19 @@ namespace TodoAppForm
                 GlobalMethods.Clear(this);
             }
         }
+
         private void textBox1_Enter(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             textBox.BackColor = Color.LightGray;
         }
+
         private void textBox1_Leave(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             textBox.BackColor = Color.White;
         }
+
         #endregion
     }
 }

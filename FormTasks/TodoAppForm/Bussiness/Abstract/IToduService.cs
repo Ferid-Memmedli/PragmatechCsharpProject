@@ -12,5 +12,6 @@ namespace TodoAppForm.Bussiness.Abstract
         public int Add(TodoEntity data);
         public List<TodoEntity> GetAll();
         public List<TodoEntity> GetAll(Status status);
+        public List<TodoEntity> GetAll(ImportanceLevel importanceLevel);
     }
 }
