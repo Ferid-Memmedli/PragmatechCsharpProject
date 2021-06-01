@@ -16,5 +16,6 @@ namespace TodoAppForm.Constans
         public const string AddOperationAgain = "Add Operation Again ?";
         public const string AddError = "Excepction: Add Operation Error!";
         public const string EmptyList = "No Data";
+        public const string AddTodoQuestion = "New To Do Add Operation ?";
     }
 }

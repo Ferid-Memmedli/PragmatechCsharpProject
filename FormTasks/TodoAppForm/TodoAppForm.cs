@@ -79,7 +79,25 @@ namespace TodoAppForm
                     form.Show();
                 }
                 else
+                {
                     MessageBox.Show(GlobalConstants.EmptyList, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show(GlobalConstants.AddTodoQuestion, GlobalConstants.CaptionQuestion,MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (Application.OpenForms["NewTodoForm"] == null) 
+                        {
+                            NewTodoForm newTodoForm = new NewTodoForm();
+                            newTodoForm.MdiParent = this;
+                            newTodoForm.StartPosition = FormStartPosition.CenterScreen;
+                            newTodoForm.Show();
+                        }
+                        else
+                        {
+                            Form form = Application.OpenForms["NewTodoForm"];
+                            form.Focus();
+                        }
+                    }
+                }
             }
         }
 
