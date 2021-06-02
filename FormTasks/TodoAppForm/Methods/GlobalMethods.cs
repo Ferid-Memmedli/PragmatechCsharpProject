@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TodoAppForm.Methods
@@ -47,6 +43,11 @@ namespace TodoAppForm.Methods
                     checkBox.Checked = false;                                
             }
         }
+        /// <summary>
+        /// TextBox-lar null ve ya empty olarsa true eks teqdirde false qaytarir
+        /// </summary>
+        /// <param name="control"></param>
+        /// <returns>returun type: bool</returns>
         public static bool TextBoxIsNullOrEmpty(Control control)
         {
             bool result = false;

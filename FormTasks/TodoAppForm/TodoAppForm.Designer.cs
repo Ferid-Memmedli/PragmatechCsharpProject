@@ -149,6 +149,7 @@
             this.Name = "TodoAppForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TodoAppForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TodoAppForm_Load);
             this.panel1.ResumeLayout(false);
             this.gbOperation.ResumeLayout(false);

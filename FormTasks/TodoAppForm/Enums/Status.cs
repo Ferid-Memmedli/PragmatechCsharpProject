@@ -1,5 +1,4 @@
-﻿
-namespace TodoAppForm.Enums
+﻿namespace TodoAppForm.Enums
 {
     public enum Status
     {

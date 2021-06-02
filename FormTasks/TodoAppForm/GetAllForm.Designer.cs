@@ -38,6 +38,7 @@ namespace TodoAppForm
             this.btnLessImportant = new System.Windows.Forms.Button();
             this.btnGeneralImportant = new System.Windows.Forms.Button();
             this.gbStatusFilter = new System.Windows.Forms.GroupBox();
+            this.btnSuspended = new System.Windows.Forms.Button();
             this.btnPending = new System.Windows.Forms.Button();
             this.btnCompleted = new System.Windows.Forms.Button();
             this.btnInCompleted = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace TodoAppForm
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.lblListCount = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
-            this.btnSuspended = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gbOperation.SuspendLayout();
             this.gbLevelFilter.SuspendLayout();
@@ -163,6 +163,18 @@ namespace TodoAppForm
             this.gbStatusFilter.TabStop = false;
             this.gbStatusFilter.Text = "Status Filter";
             // 
+            // btnSuspended
+            // 
+            this.btnSuspended.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuspended.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSuspended.Location = new System.Drawing.Point(3, 111);
+            this.btnSuspended.Name = "btnSuspended";
+            this.btnSuspended.Size = new System.Drawing.Size(127, 23);
+            this.btnSuspended.TabIndex = 6;
+            this.btnSuspended.Text = "Suspended";
+            this.btnSuspended.UseVisualStyleBackColor = true;
+            this.btnSuspended.Click += new System.EventHandler(this.btnSuspended_Click);
+            // 
             // btnPending
             // 
             this.btnPending.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -264,18 +276,6 @@ namespace TodoAppForm
             this.lblCount.TabIndex = 6;
             this.lblCount.Text = "0";
             // 
-            // btnSuspended
-            // 
-            this.btnSuspended.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuspended.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSuspended.Location = new System.Drawing.Point(3, 111);
-            this.btnSuspended.Name = "btnSuspended";
-            this.btnSuspended.Size = new System.Drawing.Size(127, 23);
-            this.btnSuspended.TabIndex = 6;
-            this.btnSuspended.Text = "Suspended";
-            this.btnSuspended.UseVisualStyleBackColor = true;
-            this.btnSuspended.Click += new System.EventHandler(this.btnSuspended_Click);
-            // 
             // getAllForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -285,7 +285,7 @@ namespace TodoAppForm
             this.Controls.Add(this.lblListCount);
             this.Controls.Add(this.gbList);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "getAllForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Get All Form";
