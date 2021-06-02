@@ -75,7 +75,7 @@ namespace TodoAppForm
             this.txtShort.Location = new System.Drawing.Point(131, 41);
             this.txtShort.Multiline = true;
             this.txtShort.Name = "txtShort";
-            this.txtShort.Size = new System.Drawing.Size(319, 90);
+            this.txtShort.Size = new System.Drawing.Size(319, 70);
             this.txtShort.TabIndex = 2;
             this.txtShort.Enter += new System.EventHandler(this.textBox1_Enter);
             this.txtShort.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -83,7 +83,7 @@ namespace TodoAppForm
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 140);
+            this.label3.Location = new System.Drawing.Point(12, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 0;
@@ -91,10 +91,10 @@ namespace TodoAppForm
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(131, 137);
+            this.txtDesc.Location = new System.Drawing.Point(131, 117);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(319, 159);
+            this.txtDesc.Size = new System.Drawing.Size(319, 117);
             this.txtDesc.TabIndex = 3;
             this.txtDesc.Enter += new System.EventHandler(this.textBox1_Enter);
             this.txtDesc.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -102,7 +102,7 @@ namespace TodoAppForm
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 305);
+            this.label4.Location = new System.Drawing.Point(12, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 15);
             this.label4.TabIndex = 0;
@@ -113,7 +113,7 @@ namespace TodoAppForm
             this.cmbStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(131, 331);
+            this.cmbStatus.Location = new System.Drawing.Point(131, 269);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(319, 23);
             this.cmbStatus.TabIndex = 5;
@@ -121,7 +121,7 @@ namespace TodoAppForm
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 334);
+            this.label5.Location = new System.Drawing.Point(12, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 3;
@@ -130,7 +130,7 @@ namespace TodoAppForm
             // btnSave
             // 
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Location = new System.Drawing.Point(305, 360);
+            this.btnSave.Location = new System.Drawing.Point(305, 298);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(145, 37);
             this.btnSave.TabIndex = 6;
@@ -143,7 +143,7 @@ namespace TodoAppForm
             this.cmbImportanceLevel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbImportanceLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbImportanceLevel.FormattingEnabled = true;
-            this.cmbImportanceLevel.Location = new System.Drawing.Point(131, 302);
+            this.cmbImportanceLevel.Location = new System.Drawing.Point(131, 240);
             this.cmbImportanceLevel.Name = "cmbImportanceLevel";
             this.cmbImportanceLevel.Size = new System.Drawing.Size(319, 23);
             this.cmbImportanceLevel.TabIndex = 7;
@@ -152,7 +152,7 @@ namespace TodoAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 409);
+            this.ClientSize = new System.Drawing.Size(462, 345);
             this.Controls.Add(this.cmbImportanceLevel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
