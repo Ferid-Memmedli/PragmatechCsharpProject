@@ -289,6 +289,7 @@ namespace TodoAppForm
             this.Name = "getAllForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Get All Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.getAllForm_Load);
             this.panel1.ResumeLayout(false);
             this.gbOperation.ResumeLayout(false);
