@@ -18,8 +18,7 @@ namespace TodoAppForm.DataAcces.Concrete
         } //InMemoryUserDal Instance alinan zaman Virtual DataBase-de Instance almaq ve UserData yerlesdirmeq
         public UserEntity GetUser(string username, string password)
         {
-            var user = _userEntities.SingleOrDefault(i => i.Username == username && i.Password == password);
-            return user;
+            return _userEntities.SingleOrDefault(i => i.Username == username && i.Password == password);
         } //DataBase-den Useri tapmaq
         public List<UserEntity> GetAll()
         {

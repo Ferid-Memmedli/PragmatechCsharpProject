@@ -50,7 +50,7 @@ namespace CustomerAdd
                 Icon = SystemIcons.Information,
                 Visible = true
             };
-            notifyIcon.ShowBalloonTip(1000);
+            notifyIcon.ShowBalloonTip(1500);
             #endregion
             ClearTextBox();
         }

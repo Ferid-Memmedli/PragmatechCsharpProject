@@ -34,7 +34,7 @@ namespace TodoAppForm
                 var user = userService.GetUser(txtUsername.Text, txtPassword.Text);
                 if (user != null)
                 {
-                    Form todoListForm = Application.OpenForms["TodoAppForm"];
+                    Form todoListForm = Application.OpenForms[GlobalConstants.TodoAppForm];
                     Panel leftSideBarPanel = (Panel)todoListForm.Controls["panel1"];
                     GroupBox grpBox = (GroupBox)leftSideBarPanel.Controls["gbOperation"];
                     GlobalMethods.OperationBtnEnabled(grpBox,true);

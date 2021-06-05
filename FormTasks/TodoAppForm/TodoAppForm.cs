@@ -38,15 +38,15 @@ namespace TodoAppForm
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["NewTodoForm"] != null)
+            if (Application.OpenForms[GlobalConstants.NewTodoForm] != null)
             {
-                _form = Application.OpenForms["NewTodoForm"];
+                _form = Application.OpenForms[GlobalConstants.NewTodoForm];
                 _form.Focus();
             }
             else
             {
-                if (Application.OpenForms["getAllForm"] != null)
-                    Application.OpenForms["getAllForm"].Close();
+                if (Application.OpenForms[GlobalConstants.GetAllForm] != null)
+                    Application.OpenForms[GlobalConstants.GetAllForm].Close();
 
                 NewTodoForm form = new NewTodoForm();
                 form.MdiParent = this;
@@ -57,7 +57,7 @@ namespace TodoAppForm
 
         private void btnGetAll_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["getAllForm"] != null)
+            if (Application.OpenForms[GlobalConstants.GetAllForm] != null)
             {
                 _form = Application.OpenForms["getAllForm"];
                 _form.Focus();
@@ -66,10 +66,10 @@ namespace TodoAppForm
             {
                 if (_todoService.Count() > 0)
                 {
-                    if (Application.OpenForms["NewTodoForm"] != null)
-                        Application.OpenForms["NewTodoForm"].Close();
+                    if (Application.OpenForms[GlobalConstants.NewTodoForm] != null)
+                        Application.OpenForms[GlobalConstants.NewTodoForm].Close();
                     getAllForm form = new getAllForm();
-                    form.MdiParent = Application.OpenForms["TodoAppForm"];
+                    form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterScreen;
                     form.Show();
                 }
@@ -79,7 +79,7 @@ namespace TodoAppForm
                     DialogResult result = MessageBox.Show(GlobalConstants.AddTodoQuestion, GlobalConstants.CaptionQuestion,MessageBoxButtons.YesNo,MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
                     {
-                        if (Application.OpenForms["NewTodoForm"] == null) 
+                        if (Application.OpenForms[GlobalConstants.NewTodoForm] == null) 
                         {
                             NewTodoForm newTodoForm = new NewTodoForm();
                             newTodoForm.MdiParent = this;
@@ -88,7 +88,7 @@ namespace TodoAppForm
                         }
                         else
                         {
-                            Form form = Application.OpenForms["NewTodoForm"];
+                            Form form = Application.OpenForms[GlobalConstants.NewTodoForm];
                             form.Focus();
                         }
                     }

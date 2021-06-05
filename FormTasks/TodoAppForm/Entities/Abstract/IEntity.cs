@@ -8,6 +8,6 @@ namespace TodoAppForm.Entities.Abstract
 {
     public interface IEntity<T>
     {
-        public T Id { get; set; }
+        T Id { get; set; }
     }
 }

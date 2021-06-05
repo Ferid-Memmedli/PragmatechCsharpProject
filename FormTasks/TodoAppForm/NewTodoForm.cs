@@ -54,13 +54,13 @@ namespace TodoAppForm
             if (result > 0)
             {
                 MessageBox.Show(GlobalConstants.AddSuccess, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Information);
-                DialogResult dialogResult = MessageBox.Show (GlobalConstants.AddOperationAgain,GlobalConstants.CaptionQuestion,MessageBoxButtons.YesNo,MessageBoxIcon.Question );
+                DialogResult dialogResult = MessageBox.Show(GlobalConstants.AddOperationAgain, GlobalConstants.CaptionQuestion, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                     GlobalMethods.Clear(this); 
                 else
                 {
                     Form getAllForm = new getAllForm();
-                    getAllForm.MdiParent = Application.OpenForms["TodoAppForm"];
+                    getAllForm.MdiParent = Application.OpenForms[GlobalConstants.TodoAppForm] ;
                     getAllForm.StartPosition = FormStartPosition.CenterScreen;
                     getAllForm.Show();
                     this.Close();

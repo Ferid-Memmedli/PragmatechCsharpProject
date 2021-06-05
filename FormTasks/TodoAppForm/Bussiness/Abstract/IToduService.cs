@@ -8,10 +8,10 @@ namespace TodoAppForm.Bussiness.Abstract
 {
     public interface ITodoService
     {         
-        public int Count();
-        public int Add(TodoEntity data);
-        public List<TodoEntity> GetAll();
-        public List<TodoEntity> GetAll(Status status);
-        public List<TodoEntity> GetAll(ImportanceLevel importanceLevel);
+        int Count();
+        int Add(TodoEntity data);
+        List<TodoEntity> GetAll();
+        List<TodoEntity> GetAll(Status status);
+        List<TodoEntity> GetAll(ImportanceLevel importanceLevel);
     }
 }
