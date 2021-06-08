@@ -51,11 +51,13 @@ namespace FolderFileTask
             FileStream fs = File.Create($"{path}\\{txtFile.Text}{cmbFileExtension.Text}");
             dataGridView.Rows.Add(Path.GetFileName(fs.Name), Path.GetExtension(fs.Name));
             fs.Close();
+            txtFile.Clear();
         }
         private void btnCreateFolder_Click(object sender, EventArgs e)
         {
             DirectoryInfo directoryInfo = Directory.CreateDirectory($"{path}\\{txtFolder.Text}");
             dataGridView.Rows.Add(Path.GetFileName(directoryInfo.Name), "Folder");
+            txtFolder.Clear();
         }
         private void richTextBox_TextChanged(object sender, EventArgs e)
         {
