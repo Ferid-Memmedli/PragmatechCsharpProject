@@ -40,35 +40,37 @@ namespace TodoAppForm
             int result = 0;
             if (!GlobalMethods.TextBoxIsNullOrEmpty(this))
             {
-                result = _todoService.Add(new TodoEntity 
+                result = _todoService.Add(new TodoEntity
                 {
                     Id = Guid.NewGuid(),
                     Title = txtTitle.Text,
                     ShortDescription = txtShort.Text,
                     Description = txtDesc.Text,
                     ImportanceLevel = (ImportanceLevel)cmbImportanceLevel.SelectedItem,
-                    Status = (Status)cmbStatus.SelectedItem 
+                    Status = (Status)cmbStatus.SelectedItem
                 });
             }
 
             if (result > 0)
             {
-                MessageBox.Show(GlobalConstants.AddSuccess, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show(GlobalConstants.AddSuccess, GlobalConstants.CaptionInfo, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult dialogResult = MessageBox.Show(GlobalConstants.AddOperationAgain, GlobalConstants.CaptionQuestion, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
-                    GlobalMethods.Clear(this); 
+                    GlobalMethods.Clear(this);
                 else
                 {
-                    Form getAllForm = new getAllForm();
-                    getAllForm.MdiParent = Application.OpenForms[GlobalConstants.TodoAppForm] ;
-                    getAllForm.StartPosition = FormStartPosition.CenterScreen;
+                    Form getAllForm = new getAllForm
+                    {
+                        MdiParent = Application.OpenForms[GlobalConstants.TodoAppForm],
+                        StartPosition = FormStartPosition.CenterScreen
+                    };
                     getAllForm.Show();
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show(GlobalConstants.AddError, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(GlobalConstants.AddError, GlobalConstants.CaptionInfo, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 GlobalMethods.Clear(this);
             }
         }

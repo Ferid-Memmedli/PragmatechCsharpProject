@@ -37,7 +37,7 @@ namespace TodoAppForm
                     Form todoListForm = Application.OpenForms[GlobalConstants.TodoAppForm];
                     Panel leftSideBarPanel = (Panel)todoListForm.Controls["panel1"];
                     GroupBox grpBox = (GroupBox)leftSideBarPanel.Controls["gbOperation"];
-                    GlobalMethods.OperationBtnEnabled(grpBox,true);
+                    GlobalMethods.OperationBtnEnabled(grpBox, true);
                     this.Close();
                 }
                 else

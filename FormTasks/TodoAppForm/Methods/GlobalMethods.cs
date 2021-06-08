@@ -21,7 +21,7 @@ namespace TodoAppForm.Methods
         /// </summary>
         /// <param name="control"></param>
         /// <param name="trueOrFalse"></param>
-        public static void OperationBtnEnabled(Control control,bool trueOrFalse)
+        public static void OperationBtnEnabled(Control control, bool trueOrFalse)
         {
             foreach (var item in control.Controls)
             {
@@ -40,7 +40,7 @@ namespace TodoAppForm.Methods
                 if (item is TextBox textBox)
                     textBox.Text = string.Empty;
                 if (item is CheckBox checkBox)
-                    checkBox.Checked = false;                                
+                    checkBox.Checked = false;
             }
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace TodoAppForm.Methods
                 {
                     if (string.IsNullOrEmpty(textBox.Text))
                     {
-                        result =  true;
+                        result = true;
                         break;
                     }
                 }

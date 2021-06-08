@@ -27,7 +27,7 @@ namespace TodoAppForm
         private void TodoAppForm_Load(object sender, EventArgs e)
         {
             GlobalMethods.GetDateTime(timerDateTime, timerDateTime_Tick);  //Tarix
-            GlobalMethods.OperationBtnEnabled(gbOperation,false);  //Operationdaki Buttonlarin False olunmasi
+            GlobalMethods.OperationBtnEnabled(gbOperation, false);  //Operationdaki Buttonlarin False olunmasi
             LoginForm loginForm = new LoginForm
             {
                 MdiParent = this,
@@ -48,9 +48,11 @@ namespace TodoAppForm
                 if (Application.OpenForms[GlobalConstants.GetAllForm] != null)
                     Application.OpenForms[GlobalConstants.GetAllForm].Close();
 
-                NewTodoForm form = new NewTodoForm();
-                form.MdiParent = this;
-                form.StartPosition = FormStartPosition.CenterScreen;
+                NewTodoForm form = new NewTodoForm
+                {
+                    MdiParent = this,
+                    StartPosition = FormStartPosition.CenterScreen
+                };
                 form.Show();
             }
         }
@@ -68,22 +70,26 @@ namespace TodoAppForm
                 {
                     if (Application.OpenForms[GlobalConstants.NewTodoForm] != null)
                         Application.OpenForms[GlobalConstants.NewTodoForm].Close();
-                    getAllForm form = new getAllForm();
-                    form.MdiParent = this;
-                    form.StartPosition = FormStartPosition.CenterScreen;
+                    getAllForm form = new getAllForm
+                    {
+                        MdiParent = this,
+                        StartPosition = FormStartPosition.CenterScreen
+                    };
                     form.Show();
                 }
                 else
                 {
-                    MessageBox.Show(GlobalConstants.EmptyList, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    DialogResult result = MessageBox.Show(GlobalConstants.AddTodoQuestion, GlobalConstants.CaptionQuestion,MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+                    MessageBox.Show(GlobalConstants.EmptyList, GlobalConstants.CaptionInfo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show(GlobalConstants.AddTodoQuestion, GlobalConstants.CaptionQuestion, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
                     {
-                        if (Application.OpenForms[GlobalConstants.NewTodoForm] == null) 
+                        if (Application.OpenForms[GlobalConstants.NewTodoForm] == null)
                         {
-                            NewTodoForm newTodoForm = new NewTodoForm();
-                            newTodoForm.MdiParent = this;
-                            newTodoForm.StartPosition = FormStartPosition.CenterScreen;
+                            NewTodoForm newTodoForm = new NewTodoForm
+                            {
+                                MdiParent = this,
+                                StartPosition = FormStartPosition.CenterScreen
+                            };
                             newTodoForm.Show();
                         }
                         else

@@ -7,7 +7,7 @@ using TodoAppForm.Enums;
 namespace TodoAppForm.Bussiness.Abstract
 {
     public interface ITodoService
-    {         
+    {
         int Count();
         int Add(TodoEntity data);
         List<TodoEntity> GetAll();
