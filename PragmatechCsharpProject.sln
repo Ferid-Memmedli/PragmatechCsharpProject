@@ -21,19 +21,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "FormTasks\Cal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerAdd", "FormTasks\CustomerAdd\CustomerAdd.csproj", "{4433EDC5-E5DC-4170-B81A-A708384121DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStock", "FormTasks\BookStock\BookStock.csproj", "{96A7D07C-A209-4EDA-BC28-49F303E66701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStock", "FormTasks\BookStock\BookStock.csproj", "{96A7D07C-A209-4EDA-BC28-49F303E66701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdenisHesaplama", "FormTasks\OdenisHesaplama\OdenisHesaplama.csproj", "{CD581CB9-8380-42AC-9133-EDFBCC2ABA57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdenisHesaplama", "FormTasks\OdenisHesaplama\OdenisHesaplama.csproj", "{CD581CB9-8380-42AC-9133-EDFBCC2ABA57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoolCalculation", "FormTasks\PoolCalculation\PoolCalculation.csproj", "{A6C795A2-CED8-4BD2-97D8-1EFCDB4E79B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoolCalculation", "FormTasks\PoolCalculation\PoolCalculation.csproj", "{A6C795A2-CED8-4BD2-97D8-1EFCDB4E79B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaOrder", "FormTasks\PizzaOrder\PizzaOrder.csproj", "{C6A41EA2-2CD9-477E-864A-C26BC2E7CB51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaOrder", "FormTasks\PizzaOrder\PizzaOrder.csproj", "{C6A41EA2-2CD9-477E-864A-C26BC2E7CB51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAppForm", "FormTasks\TodoAppForm\TodoAppForm.csproj", "{9D0CDC89-DF07-4CE8-8320-F469A4450302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoAppForm", "FormTasks\TodoAppForm\TodoAppForm.csproj", "{9D0CDC89-DF07-4CE8-8320-F469A4450302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10.Task", "ConsoleTasks\Week10.Task\Week10.Task.csproj", "{136AC495-EDCE-4A7A-B04F-B5D4EF8DB76B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week10.Task", "ConsoleTasks\Week10.Task\Week10.Task.csproj", "{136AC495-EDCE-4A7A-B04F-B5D4EF8DB76B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderFileTask", "FormTasks\FolderFileTask\FolderFileTask.csproj", "{839B89D8-B963-4EEE-A7E2-3CB7AC0B3AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FolderFileTask", "FormTasks\FolderFileTask\FolderFileTask.csproj", "{839B89D8-B963-4EEE-A7E2-3CB7AC0B3AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week11.01.Task", "ConsoleTasks\Week11.01.Task\Week11.01.Task.csproj", "{1F78D3D2-B944-4E10-9018-896F7F4E5822}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{839B89D8-B963-4EEE-A7E2-3CB7AC0B3AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{839B89D8-B963-4EEE-A7E2-3CB7AC0B3AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{839B89D8-B963-4EEE-A7E2-3CB7AC0B3AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F78D3D2-B944-4E10-9018-896F7F4E5822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F78D3D2-B944-4E10-9018-896F7F4E5822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F78D3D2-B944-4E10-9018-896F7F4E5822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F78D3D2-B944-4E10-9018-896F7F4E5822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{9D0CDC89-DF07-4CE8-8320-F469A4450302} = {A251BCE0-87B2-4A98-93F6-C4FF732B70F6}
 		{136AC495-EDCE-4A7A-B04F-B5D4EF8DB76B} = {628A5EA6-FC99-43D1-AAA5-59AFF1B04A11}
 		{839B89D8-B963-4EEE-A7E2-3CB7AC0B3AAD} = {A251BCE0-87B2-4A98-93F6-C4FF732B70F6}
+		{1F78D3D2-B944-4E10-9018-896F7F4E5822} = {628A5EA6-FC99-43D1-AAA5-59AFF1B04A11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEE43466-B39B-47F8-A9CB-9331C33562EE}
