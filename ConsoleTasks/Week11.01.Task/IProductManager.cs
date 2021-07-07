@@ -9,6 +9,6 @@ namespace ConsoleApp1
 {
     public interface IProductManager
     {
-        List<Product> Getall(Expression<Func<Product,bool>>filter = null);
+        List<Product> Getall(Expression<Func<Product,bool>> filter = null);
     }
 }

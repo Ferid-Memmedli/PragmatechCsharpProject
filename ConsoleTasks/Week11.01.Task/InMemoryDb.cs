@@ -18,13 +18,9 @@ namespace ConsoleApp1
             new Product(){Id=5 ,Name = "Yag",Status =false,IsDeleted = false,Price=8},
             new Product(){Id=6 ,Name = "Pendir",Status =true,IsDeleted = false,Price=4}
         };
-
-
         public List<Product> Getall(Expression<Func<Product, bool>> filter = null)
         {
-            return filter != null?
-                _database.AsQueryable().Where(filter).ToList()
-                :_database;
+            return filter == null? _database : _database.AsQueryable().Where(filter).ToList();
         }
     }
 }

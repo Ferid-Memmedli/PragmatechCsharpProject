@@ -1,0 +1,7 @@
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\bin\Debug\ConsoleApp1.exe.config
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\bin\Debug\ConsoleApp1.exe
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\bin\Debug\ConsoleApp1.pdb
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\obj\Debug\Week11.01.Task.csproj.AssemblyReference.cache
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\obj\Debug\Week11.01.Task.csproj.CoreCompileInputs.cache
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\obj\Debug\ConsoleApp1.exe
+C:\Users\shaha\Desktop\Pragmatech\PragmatechCsharpProject\ConsoleTasks\Week11.01.Task\obj\Debug\ConsoleApp1.pdb
