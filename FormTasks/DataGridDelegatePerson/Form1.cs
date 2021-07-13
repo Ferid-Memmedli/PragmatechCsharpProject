@@ -16,15 +16,39 @@ namespace DataGridDelegatePerson
         {
             InitializeComponent();
         }
+        DataSource dataSource = new DataSource();
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataSource dataSource = new DataSource();
-            dataGridView1.DataSource = dataSource.GetAll().OrderBy(p => p.Profession).ToList();
+            dataGridView1.DataSource = dataSource.GetAllOrderByProfession();
+            listBoxSiralama.Items.Add("Name");
+            listBoxSiralama.Items.Add("Profession");
+            listBoxSiralama.Items.Add("Country");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (txtSearch.Text.Length >= 3)
+            {
+               // string siralama = listBoxSiralama.SelectedItem.ToString();
 
-        }
+                switch (listBoxSiralama.SelectedIndex)
+                {
+                    case 0:
+                        dataGridView1.DataSource = dataSource.GetAll(p => p.Name.ToUpper().Contains(txtSearch.Text.ToUpper()));
+                        break;
+                    case 1:
+                        dataGridView1.DataSource = dataSource.GetAll(p => p.Profession.ToUpper().Contains(txtSearch.Text.ToUpper()));
+
+                        break;
+                    case 2:
+                        dataGridView1.DataSource = dataSource.GetAll(p => p.Country.ToUpper().Contains(txtSearch.Text.ToUpper()));
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("En az 3 herif daxil edilmelidi", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        } 
     }
 }
