@@ -18,6 +18,9 @@ namespace WebMVC.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        [Route("custom/12312/2")]//isdediyin routu et)
         public string Custom()
         {
             return ReadAllFile($"\\Views\\Home\\Custom.html");
